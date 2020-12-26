@@ -2,7 +2,7 @@ import React from 'react'
 import Link from "next/link";
 import {StyledA, StyledNav} from "./StylesNav";
 import ServicesLink from "./services/ServicesLink";
-import CatalogLink from "./catalog/CatalogLink";
+import CatalogLinkContainer from "./catalog/CatalogLinkContainer";
 
 
 const Nav = () => {
@@ -12,7 +12,7 @@ const Nav = () => {
         <StyledA>Главная</StyledA>
       </Link>
 
-      <CatalogLink />
+      <CatalogLinkContainer />
 
       <ServicesLink />
 
