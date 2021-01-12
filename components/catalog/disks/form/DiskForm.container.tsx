@@ -2,13 +2,14 @@ import React from 'react';
 import {ISelectItem} from "../../../../interfaces/catalog/ICatalog";
 import {connect} from "react-redux";
 import CatalogForm from "../../general/form/CatalogForm";
+import {reduxForm} from "redux-form";
 
 
 interface IState {
   data: ISelectItem[];
 }
 
-const DisksFormContainer = (props: IState) => {
+const DisksFormContainer = (props: any) => {
   return(
     <CatalogForm data={props.data} />
   )
@@ -18,4 +19,6 @@ let mapStateToProps = (state) => ({
   data: state.disksData.disks
 })
 
-export default connect(mapStateToProps)(DisksFormContainer);
+const DisksSearch = reduxForm({form: "searchFeedbackForm"})(DisksFormContainer)
+
+export default connect(mapStateToProps)(DisksSearch);

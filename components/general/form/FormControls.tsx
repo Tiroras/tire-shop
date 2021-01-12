@@ -1,14 +1,15 @@
 import React from 'react';
+import ErrorValidateMessage from "./ErrorValidateMessage";
 
 
-export const FormControl = ({input, meta, child, ...props}: any) => {
-  const hasError = meta.touched && meta.error;
+export const FormControl = ({input, meta: {touched, error}, children}) => {
+  const hasError = touched && error;
   return(
     <div>
       <div>
-        {props.children}
+        {children}
       </div>
-      {hasError && <span>{meta.error}</span>}
+      {hasError && <ErrorValidateMessage error={error} />}
     </div>
   )
 }
@@ -16,8 +17,19 @@ export const FormControl = ({input, meta, child, ...props}: any) => {
 export const Input = (props) => {
   const {input, meta, child, ...restProps} = props;
   return(
-    <FormControl>
+    <FormControl {...props}>
       <input {...input} {...restProps} />
+    </FormControl>
+  )
+}
+
+export const Select = (props) => {
+  const {input, meta, child, ...restProps} = props;
+  return(
+    <FormControl {...props}>
+      <select>
+        {child}
+      </select>
     </FormControl>
   )
 }
