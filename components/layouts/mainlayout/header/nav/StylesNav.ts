@@ -10,16 +10,16 @@ export const StyledNav = styled.nav`
   
   font-size: 2.5vh;
   
-  background-color: #3E94D1;
+  background-color: #3e94d1;
   
-  border-top: 3px solid #A9A9A9;
+  border-top: 3px solid #a9a9a9;
   border-bottom: none;
 `
 
 export const StyledA = styled.a`
   padding: 2vh 5vw;
   :hover{
-    background-color: #FF9540;
+    background-color: #ff9540;
     transition: 0.25s;
   }
   :not(:hover){

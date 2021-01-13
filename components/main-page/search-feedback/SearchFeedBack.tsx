@@ -8,6 +8,10 @@ const Layout = styled.div`
   justify-content: center;
   align-items: baseline;
   flex-direction: row;
+  color: white;
+  background-color: #3e94d1;
+  border-radius: 10px;
+  border: 2px solid #a9a9a9;
 `
 
 const Half = styled.span`

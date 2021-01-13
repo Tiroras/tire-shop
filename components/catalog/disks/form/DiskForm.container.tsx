@@ -19,6 +19,6 @@ let mapStateToProps = (state) => ({
   data: state.disksData.disks
 })
 
-const DisksSearch = reduxForm({form: "searchFeedbackForm"})(DisksFormContainer)
+const DisksSearch = reduxForm({form: "searchDisksForm"})(DisksFormContainer)
 
 export default connect(mapStateToProps)(DisksSearch);
