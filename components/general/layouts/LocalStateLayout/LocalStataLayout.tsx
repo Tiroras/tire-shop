@@ -1,6 +1,6 @@
 import React from 'react';
 import {Provider} from "react-redux";
-import store from "../../../redux/reducer";
+import store from "../../../../redux/reducer";
 import MainLayout from "../mainlayout/MainLayout";
 
 

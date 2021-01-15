@@ -1,7 +1,7 @@
 import React from 'react'
 import CatalogLink from "./CatalogLink";
 import {connect} from "react-redux";
-import {ICatalog} from "../../../../../../interfaces/reducers/INav";
+import {ICatalog} from "../../../../../../../interfaces/reducers/INav";
 
 
 interface IProps {

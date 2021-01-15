@@ -1,4 +1,5 @@
 import React from 'react'
+import FeedbackFormContainer from "./form/FeedbackForm.container";
 
 
 const Feedback = () => {
@@ -6,9 +7,9 @@ const Feedback = () => {
     <div>
       <h3>Обратная связь</h3>
 
-      <form>
-        Когда-нибудь здесь будет форма
-      </form>
+      <div>
+        <FeedbackFormContainer />
+      </div>
     </div>
   )
 }

@@ -17,7 +17,6 @@ const FormBlock = styled.form`
   padding: 4vh 3vw;
   border: 2px solid #a9a9a9;
   border-radius:10px;
-  width: 20%;
 `
 const Button = styled.button`
   margin-top: 2vh;

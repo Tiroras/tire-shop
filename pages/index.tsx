@@ -1,5 +1,5 @@
 import React from "react";
-import MainLayout from "../components/layouts/mainlayout/MainLayout";
+import MainLayout from "../components/general/layouts/mainlayout/MainLayout";
 import MainPage from "../components/main-page/MainPage";
 
 

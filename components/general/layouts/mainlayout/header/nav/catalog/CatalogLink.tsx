@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from "next/link";
 import {DropDownList, StyledA} from "../StylesNav";
-import {ICatalog} from "../../../../../../interfaces/reducers/INav";
+import {ICatalog} from "../../../../../../../interfaces/reducers/INav";
 import CatNavList from "./CatNavList";
 
 
