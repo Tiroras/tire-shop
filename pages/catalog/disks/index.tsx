@@ -1,6 +1,6 @@
 import React from 'react'
-import MainLayout from "../../../components/general/layouts/mainlayout/MainLayout";
-import DisksContainer from "../../../components/catalog/disks/DisksCatalog.container";
+import MainLayout from "../../../src/components/general/layouts/mainlayout/MainLayout";
+import DisksContainer from "../../../src/components/catalog/disks/DisksCatalog.container";
 
 
 const Disks = () => {

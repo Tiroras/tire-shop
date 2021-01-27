@@ -1,6 +1,6 @@
 import React from "react";
-import MainLayout from "../../components/general/layouts/mainlayout/MainLayout";
-import Contacts from "../../components/contacts/Contacts";
+import MainLayout from "../../src/components/general/layouts/mainlayout/MainLayout";
+import Contacts from "../../src/components/contacts/Contacts";
 
 
 export default function Home() {

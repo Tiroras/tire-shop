@@ -11,7 +11,6 @@ const Header = () => {
   return(
     <StyledHeader>
       <TopHeader />
-
       <Nav />
     </StyledHeader>
   )

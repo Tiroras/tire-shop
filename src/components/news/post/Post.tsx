@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
+import Link from "next/link";
 
 
 interface IProps {
+  id: number
   img: string;
   header: string;
   text: string;
@@ -28,12 +30,16 @@ const Date = styled.div`
 const Post = (props: IProps) => {
   return(
     <Layout>
-      <div className={"img"}>
-        <img src={props.img} />
-      </div>
-      <Header>
-        <h3>{props.header}</h3>
-      </Header>
+      <Link href={`/news/p/[id]`} as={`/news/p/${props.id}`}>
+        <a>
+          <div className={"img"}>
+            <img src={props.img} />
+          </div>
+          <Header>
+            <h3>{props.header}</h3>
+          </Header>
+        </a>
+      </Link>
       <div className={"text"}>
         {props.text}
       </div>

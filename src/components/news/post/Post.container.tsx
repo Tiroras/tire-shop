@@ -3,6 +3,7 @@ import Post from "./Post";
 
 
 interface IProps {
+  id: number
   img: string;
   header: string;
   text: string;
@@ -20,6 +21,7 @@ const PostContainer = (props: IProps) => {
 
   return(
     <Post
+      id={props.id}
       img={props.img}
       header={props.header}
       text={props.text}

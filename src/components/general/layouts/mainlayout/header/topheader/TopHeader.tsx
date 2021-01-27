@@ -17,9 +17,13 @@ const TopHeader = () => {
         </TopHeaderLeftPart>
 
         <span className="log_in-out_links">
-          <LogLink>Войти</LogLink>
+          <LogLink>
+            <Link href="/login"><a>Войти</a></Link>
+          </LogLink>
 
-          <LogLink>Регистрация</LogLink>
+          <LogLink>
+            <Link href="/registration"><a>Регистрация</a></Link>
+          </LogLink>
         </span>
     </StyledTopHeader>
   )

@@ -1,6 +1,6 @@
 import React from "react";
-import MainLayout from "../../../components/general/layouts/mainlayout/MainLayout";
-import TiresCatalogContainer from "../../../components/catalog/tires/TiresCatalog.container";
+import MainLayout from "../../../src/components/general/layouts/mainlayout/MainLayout";
+import TiresCatalogContainer from "../../../src/components/catalog/tires/TiresCatalog.container";
 
 
 
