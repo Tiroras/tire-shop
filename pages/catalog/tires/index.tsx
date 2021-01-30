@@ -7,7 +7,6 @@ import TiresCatalogContainer from "../../../src/components/catalog/tires/TiresCa
 export default function tires() {
   return (
     <MainLayout>
-      Привет tires
       <TiresCatalogContainer />
     </MainLayout>
   )

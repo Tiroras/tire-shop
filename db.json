@@ -1,12 +1,79 @@
 {
-  "news": {
-    "posts": [
+
+
+
+  "posts": [
+    {
+      "id":  1,
+      "header": "Мы открылись",
+      "text": "Спешим сообщить вам что наш автосалон наконец открыт для вас. Ждем посетителей.",
+      "img": ""
+    },
+    {
+      "id":  2,
+      "header": "Сайт открыт",
+      "text": "Спешим сообщить вам что наш автосалон наконец открыл для вас сайт.. Ждем посетителей.",
+      "img": ""
+    }
+  ],
+
+
+
+
+
+    "disks": [
       {
         "id": 1,
-        "header": "Мы открылись",
-        "text": "Спешим сообщить вам что наш автосалон наконец открыт для вас. Ждем посетителей.",
-        "img": ""
+        "name": "421421421",
+        "price": 4523,
+        "inStock": false,
+        "diameter": "",
+        "numberMountingHoles": "",
+        "departure": "",
+        "centerHoleDiameter": "",
+        "pcd": "",
+        "rimWidth": ""
+      }
+    ],
+
+
+
+    "tires": [
+      {
+        "id": 1,
+        "name": "tire",
+        "price": 1245,
+        "inStock": false,
+        "diameter": "",
+        "seasonality": "",
+        "width": "",
+        "brand": ""
+      }
+    ],
+
+
+
+    "mats": [
+      {
+        "id": 1,
+        "name": "mat",
+        "price": 1245,
+        "inStock": false
+      }
+    ],
+
+
+
+    "carGoods": [
+      {
+        "id": 1,
+        "name": "carGood",
+        "price": 1245,
+        "inStock": true
       }
     ]
-  }
+
+
+
+
 }

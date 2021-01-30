@@ -1,13 +1,13 @@
 import '../styles/globals.css'
 import type { AppProps /*, AppContext */ } from 'next/app'
 import {Provider} from "react-redux";
-import store from "../src/redux/reducer";
+import {wrapper} from "../src/redux/reducer";
+import React from "react";
+
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <Component {...pageProps} />
     )
 }
 
@@ -23,4 +23,4 @@ function App({ Component, pageProps }: AppProps) {
 //   return { ...appProps }
 // }
 
-export default App
+export default wrapper.withRedux(App)

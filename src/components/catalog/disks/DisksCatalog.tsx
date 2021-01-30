@@ -1,12 +1,20 @@
 import React from "react";
 import DisksFormContainer from "./form/DiskForm.container";
+import CatalogItemsContainer from "../general/content/CatalogItems.container";
+import {IProductData} from "../../../interfaces/catalog/ICatalog";
 
 
-const Disks = (props) => {
+interface IProps {
+  data: IProductData[];
+}
+
+const Disks = (props: IProps) => {
   return (
     <div>
-      Привет диски
-      <DisksFormContainer />
+      <div>
+        <DisksFormContainer />
+      </div>
+      <CatalogItemsContainer data={props.data} />
     </div>
   )
 }

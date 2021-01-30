@@ -1,12 +1,12 @@
 import {combineReducers, createStore} from "redux";
-import disksReducer from "./disks-reducer";
+import disksReducer from "./forms/disks-reducer";
 import NavReducer from "./nav-reducer";
-import tiresReducer from "./tires-reducer";
+import tiresReducer from "./forms/tires-reducer";
 import {reducer as formReducer} from "redux-form";
 import contactsReducer from "./contacts-reducer";
 import NewsReducer from "./news-reducer";
-import withRedux, {createWrapper} from "next-redux-wrapper";
-
+import {createWrapper} from "next-redux-wrapper";
+import productsReducer from "./products/products-reducer";
 
 let reducer = combineReducers({
   navData: NavReducer,
@@ -14,9 +14,12 @@ let reducer = combineReducers({
   tiresData: tiresReducer,
   contactsData: contactsReducer,
   newsData: NewsReducer,
+  productsData: productsReducer,
   form: formReducer,
 });
 
-let store = createStore(reducer);
+const initStore = () => {
+  return createStore(reducer)
+}
 
-export default store;
+export const wrapper = createWrapper(initStore)

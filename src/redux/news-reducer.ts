@@ -5,7 +5,7 @@ interface IState {
   posts: IPost[];
 }
 
-const SET_POSTS = "GET-POSTS";
+const SET_POSTS = "SET-POSTS";
 
 const initialState: IState = {
   posts: []
@@ -21,6 +21,6 @@ const NewsReducer = (state: IState = initialState, action) => {
   }
 }
 
-export const setNewsPostsAC = (posts) => ({type: SET_POSTS});
+export const setNewsPostsAC = (posts) => ({type: SET_POSTS, posts});
 
 export default NewsReducer;

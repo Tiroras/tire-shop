@@ -1,4 +1,4 @@
-import {ISelectItem} from "../interfaces/catalog/ICatalog";
+import {ISelectItem} from "../../interfaces/catalog/ICatalog";
 
 
 interface IState {

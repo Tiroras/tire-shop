@@ -7,25 +7,50 @@ const StyledServicesComponent = styled.div`
   font-size: 8vh;
   font-weight: bold;
   text-align: center;
-`
+`;
+
+const Block = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  background-color: #3E94D1;
+  color: white;
+  font-size: 4vh;
+  overflow: hidden;
+  transition: 0.3s;
+  :hover{
+    background-color: #0a64a4;
+    transition: 0.3s;
+    height: 30vh;
+    font-size: 6vh;
+  }
+`;
+
 
 const ServicesComponent = () => {
   return(
     <StyledServicesComponent>
       <Link href={"/services/season-storage"}>
-        <a>Сезонное хранение</a>
+        <a>
+          <Block>Сезонное хранение</Block>
+        </a>
       </Link>
-      <br />
       <Link href={"/services/disc-straightening"}>
-        <a>Правка дисков</a>
+        <a>
+          <Block>Правка дисков</Block>
+        </a>
       </Link>
-      <br />
       <Link href={"/services/tier-repair"}>
-        <a>Ремонт шин</a>
+        <a>
+          <Block>Ремонт шин</Block>
+        </a>
       </Link>
-      <br />
       <Link href={"/services/tire-fitting"}>
-        <a>Шиномонтаж</a>
+        <a>
+          <Block>Шиномонтаж</Block>
+        </a>
       </Link>
     </StyledServicesComponent>
   )

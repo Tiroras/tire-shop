@@ -33,10 +33,4 @@ const News = (props) => {
   )
 }
 
-// export const getServerSideProps: GetServerSideProps = async(ctx) => {
-//   const response = await fetch("http://localhost:4200/news/posts");
-//   const posts = await response.json();
-//   return {props: posts}
-// }
-
 export default News;
