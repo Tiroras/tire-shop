@@ -1,25 +1,5 @@
-interface IProduct{
-  id: number;
-  name: string;
-  price: number;
-  inStock: boolean;
-}
+import {IDisk, IProduct, ITire} from "../../interfaces/catalog/IProducts.type";
 
-interface IDisk extends IProduct{
-  diameter: string
-  seasonality: string,
-  width: string,
-  brand: string
-}
-
-interface ITire extends IProduct{
-  diameter: string;
-  numberMountingHoles: string;
-  departure: string;
-  centerHoleDiameter: string;
-  pcd: string;
-  rimWidth: string;
-}
 
 interface IProducts {
   disks: IDisk[];
@@ -36,7 +16,7 @@ interface ITypes {
 }
 
 interface IState {
-  types: ITypes;
+  readonly types: ITypes;
   products: IProducts;
 }
 

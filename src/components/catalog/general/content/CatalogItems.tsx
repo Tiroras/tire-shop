@@ -28,17 +28,17 @@ const CatalogItems = (props: IProps) => {
           inStock={prop.inStock}
         />
       ))}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={false} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={false} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
+      <ListItem img={null} name={"Товар"} inStock={true} price={5000} />
     </Layout>
   )
 }

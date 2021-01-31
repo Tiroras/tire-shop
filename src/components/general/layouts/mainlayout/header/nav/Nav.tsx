@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from "next/link";
-import {StyledA, StyledNav} from "./StylesNav";
 import ServicesLink from "./services/ServicesLink";
 import CatalogLinkContainer from "./catalog/CatalogLinkContainer";
+import {StyledNav, StyledA} from "./StylesNav";
+
 
 
 const Nav = () => {

@@ -7,6 +7,7 @@ import contactsReducer from "./contacts-reducer";
 import NewsReducer from "./news-reducer";
 import {createWrapper} from "next-redux-wrapper";
 import productsReducer from "./products/products-reducer";
+import cartReducer from "./products/cart-reducer";
 
 let reducer = combineReducers({
   navData: NavReducer,
@@ -15,6 +16,7 @@ let reducer = combineReducers({
   contactsData: contactsReducer,
   newsData: NewsReducer,
   productsData: productsReducer,
+  cartData: cartReducer,
   form: formReducer,
 });
 

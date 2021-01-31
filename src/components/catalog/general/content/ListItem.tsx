@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import BuyButton from "../product/BuyButton";
 
 
 interface IProps {
@@ -12,9 +13,12 @@ interface IProps {
 const Layout = styled.div`
   border: 3px solid #a9a9a9;
   border-radius: 15px;
-  padding: 2vw;
+  padding: 0 2vw;
   width: 300px;
   margin-top: 2vh;
+  z-index: 10;
+  height: 380px;
+  transition: 0.3s;
   div{
     margin: 2vh 0;
     display: flex;
@@ -25,17 +29,25 @@ const Layout = styled.div`
       height: 200px;
     }
   }
-  button{
-    padding:1vh 1vw;
+  
+  .buyBlock{
+    display: none;
   }
-`;
-
-const HoverBlock = styled.div`
-  display: none;
-`;
-
-const Count = styled.span`
-  margin: 0 5px;
+  
+  :hover{
+    z-index: 1000;
+    position: relative;
+    transform: scale(1.05);
+    transition: 0.3s;
+    .buyBlock{
+      display: flex;
+      
+    }
+  }
+  
+  button{
+    padding:1vh 2vh;
+  }
 `;
 
 const ListItem = (props: IProps) => {
@@ -55,18 +67,7 @@ const ListItem = (props: IProps) => {
           {props.inStock ? "В наличии" : "Нет в наличии"}
         </span>
       </div>
-      <HoverBlock>
-        <span>
-          <button>-</button>
-          <Count>1</Count>
-          <button>+</button>
-        </span>
-        <span>
-          <button>
-            Купить
-          </button>
-        </span>
-      </HoverBlock>
+      {props.inStock && <BuyButton />}
     </Layout>
   )
 }

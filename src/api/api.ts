@@ -13,7 +13,7 @@ export const newsAPI = {
     });
   },
 
-  getPost(id){
+  getPost(id: number){
     return instance.get(`posts/${id}`).then(response => {
       return response.data;
     })
@@ -21,9 +21,9 @@ export const newsAPI = {
 }
 
 export const catalogAPI = {
-  getProducts(type){
-    return instance.get(`${type}`).then(response => {
-      return response.data
+  getProducts(type: string){
+    return instance.get(`products?type=${type}`).then(response => {
+      return response.data;
     })
   }
 }

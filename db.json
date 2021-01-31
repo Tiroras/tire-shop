@@ -20,6 +20,93 @@
 
 
 
+  "products": [
+    {
+      "id": 1,
+      "name": "disk 1",
+      "price": 4523,
+      "type": "disks",
+      "inStock": false,
+      "properties": {
+        "diameter": "",
+        "numberMountingHoles": "",
+        "departure": "",
+        "centerHoleDiameter": "",
+        "pcd": "",
+        "rimWidth": ""
+      }
+    },
+    {
+      "id": 2,
+      "name": "disk 2",
+      "price": 4523,
+      "type": "disks",
+      "inStock": true,
+      "properties": {
+        "diameter": "",
+        "numberMountingHoles": "",
+        "departure": "",
+        "centerHoleDiameter": "",
+        "pcd": "",
+        "rimWidth": ""
+      }
+    },
+    {
+      "id": 3,
+      "name": "tire 1",
+      "price": 4523,
+      "type": "tires",
+      "inStock": true,
+      "properties": {
+        "diameter": "",
+        "seasonality": "",
+        "width": "",
+        "brand": ""
+      }
+    },
+    {
+      "id": 4,
+      "name": "tire 2",
+      "price": 4523,
+      "type": "tires",
+      "inStock": false,
+      "properties": {
+        "diameter": "",
+        "seasonality": "",
+        "width": "",
+        "brand": ""
+      }
+    },
+    {
+      "id": 5,
+      "name": "mats 1",
+      "price": 4523,
+      "type": "mats",
+      "inStock": false
+    },
+    {
+      "id": 6,
+      "name": "mats 2",
+      "price": 4523,
+      "type": "mats",
+      "inStock": true
+    },
+    {
+      "id": 1,
+      "name": "carGood 1",
+      "price": 1245,
+      "type": "carGoods",
+      "inStock": true
+    },
+    {
+      "id": 1,
+      "name": "carGood 2",
+      "price": 1245,
+      "type": "carGoods",
+      "inStock": false
+    }
+  ],
+
 
     "disks": [
       {

@@ -4,6 +4,7 @@ export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
   position: sticky;
   
   padding: 0vh 4vw;
@@ -14,7 +15,7 @@ export const StyledNav = styled.nav`
   
   border-top: 3px solid #a9a9a9;
   border-bottom: none;
-`
+`;
 
 export const StyledA = styled.a`
   padding: 2vh 5vw;
@@ -25,7 +26,7 @@ export const StyledA = styled.a`
   :not(:hover){
     transition: 1s;
   }
-`
+`;
 
 export const DropDownList = styled.div`
   :hover div{
@@ -47,4 +48,4 @@ export const DropDownList = styled.div`
   li :hover{
     background-color: #ff9540;
   }
-`
+`;
