@@ -38,16 +38,31 @@ const Button = styled.button`
 const FeedbackForm = (props) => {
   return(
     <form>
-      {props.data.formData.map((prop: IFDElement) => (
-        <FormBlock>
-          <Field 
-            name={prop.name}
-            id={prop.name}
-            component={Input}
-            placeholder={prop.placeholder}
-          />
-        </FormBlock>
-      ))}
+      <FormBlock>
+        <Field
+          name={"email"}
+          id={"email"}
+          component={Input}
+          type={"email"}
+          placeholder={"Введите почту"}
+        />
+      </FormBlock>
+      <FormBlock>
+        <Field
+          name={"userName"}
+          id={"userName"}
+          component={Input}
+          placeholder={"Введите имя"}
+        />
+      </FormBlock>
+      <FormBlock>
+        <Field
+          name={"number"}
+          id={"number"}
+          component={Input}
+          placeholder={"Введите номер телефона"}
+        />
+      </FormBlock>
       <FormBlock>
         <Field
           name={"message"}

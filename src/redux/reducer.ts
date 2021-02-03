@@ -28,4 +28,5 @@ const initStore = () => {
   return createStore(reducer, applyMiddleware(thunkMiddleware))
 }
 
-export const wrapper = createWrapper(initStore)
+const wrapper = createWrapper(initStore)
+export default wrapper;

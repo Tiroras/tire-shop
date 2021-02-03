@@ -11,7 +11,6 @@ interface IProps {
 const FeedbackFormContainer = (props) => {
   return(
     <FeedbackReduxForm
-      data={props.data}
     />
   )
 }

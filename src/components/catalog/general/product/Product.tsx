@@ -3,10 +3,12 @@ import BuyButton from "./BuyButton";
 
 
 interface IProps {
+  id: number;
   name: string;
   price: number;
   img: string;
   inStock: boolean;
+  sendToCart: () => any;
 }
 
 const Product = (props: IProps) => {
@@ -30,7 +32,7 @@ const Product = (props: IProps) => {
         </span>
       </div>
 
-      {props.inStock && <BuyButton /> }
+      {props.inStock && <BuyButton id={props.id} sendToCart={props.sendToCart} /> }
     </div>
   )
 }

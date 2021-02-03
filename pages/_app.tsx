@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps /*, AppContext */ } from 'next/app'
 import {Provider} from "react-redux";
-import {wrapper} from "../src/redux/reducer";
+import wrapper from "../src/redux/reducer";
 import React from "react";
 import NextNProgress from "nextjs-progressbar";
 
