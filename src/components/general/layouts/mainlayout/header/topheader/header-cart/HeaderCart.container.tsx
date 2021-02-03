@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import HeaderCart from "./HeaderCart";
 import {connect} from "react-redux";
+import {setNumbersAC} from "../../../../../../../redux/products/cart-reducer";
 
 
 interface IProps {

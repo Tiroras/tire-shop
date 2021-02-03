@@ -1,7 +1,4 @@
 {
-
-
-
   "posts": [
     {
       "id":  1,
@@ -17,9 +14,6 @@
     }
   ],
 
-
-
-
   "products": [
     {
       "id": 1,
@@ -27,14 +21,7 @@
       "price": 4523,
       "type": "disks",
       "inStock": false,
-      "properties": {
-        "diameter": "",
-        "numberMountingHoles": "",
-        "departure": "",
-        "centerHoleDiameter": "",
-        "pcd": "",
-        "rimWidth": ""
-      }
+      "attributesID": 1
     },
     {
       "id": 2,
@@ -42,14 +29,7 @@
       "price": 4523,
       "type": "disks",
       "inStock": true,
-      "properties": {
-        "diameter": "",
-        "numberMountingHoles": "",
-        "departure": "",
-        "centerHoleDiameter": "",
-        "pcd": "",
-        "rimWidth": ""
-      }
+      "attributesID": 3
     },
     {
       "id": 3,
@@ -57,12 +37,7 @@
       "price": 4523,
       "type": "tires",
       "inStock": true,
-      "properties": {
-        "diameter": "",
-        "seasonality": "",
-        "width": "",
-        "brand": ""
-      }
+      "attributesID": 2
     },
     {
       "id": 4,
@@ -70,97 +45,183 @@
       "price": 4523,
       "type": "tires",
       "inStock": false,
-      "properties": {
-        "diameter": "",
-        "seasonality": "",
-        "width": "",
-        "brand": ""
-      }
+      "attributesID": 4
     },
     {
       "id": 5,
       "name": "mats 1",
       "price": 4523,
       "type": "mats",
-      "inStock": false
+      "inStock": false,
+      "attributesID": null
     },
     {
       "id": 6,
       "name": "mats 2",
       "price": 4523,
       "type": "mats",
-      "inStock": true
+      "inStock": true,
+      "attributesID": null
     },
     {
-      "id": 1,
+      "id": 7,
       "name": "carGood 1",
       "price": 1245,
       "type": "carGoods",
-      "inStock": true
+      "inStock": true,
+      "attributesID": null
     },
     {
-      "id": 1,
+      "id": 8,
       "name": "carGood 2",
       "price": 1245,
       "type": "carGoods",
-      "inStock": false
+      "inStock": false,
+      "attributesID": null
+    },
+    {
+      "id": 9,
+      "name": "disk 3",
+      "price": 4523,
+      "type": "disks",
+      "inStock": false,
+      "attributesID": 1
     }
   ],
 
+  "categories": [
+    {
+      "id": 1,
+      "type": "disks",
+      "attributesID": 1
+    },
+    {
+      "id": 2,
+      "type": "tires",
+      "attributesID": 2
+    },
+    {
+      "id": 3,
+      "type": "mats",
+      "attributesID": null
+    },
+    {
+      "id": 4,
+      "type": "carGoods",
+      "attributesID": null
+    },
+    {
+      "id": 5,
+      "type": "disks",
+      "attributesID": 3
+    },
+    {
+      "id": 6,
+      "type": "tires",
+      "attributesID": 4
+    }
+  ],
 
-    "disks": [
-      {
-        "id": 1,
-        "name": "421421421",
-        "price": 4523,
-        "inStock": false,
-        "diameter": "",
-        "numberMountingHoles": "",
-        "departure": "",
-        "centerHoleDiameter": "",
-        "pcd": "",
-        "rimWidth": ""
-      }
-    ],
-
-
-
-    "tires": [
-      {
-        "id": 1,
-        "name": "tire",
-        "price": 1245,
-        "inStock": false,
-        "diameter": "",
-        "seasonality": "",
-        "width": "",
-        "brand": ""
-      }
-    ],
-
-
-
-    "mats": [
-      {
-        "id": 1,
-        "name": "mat",
-        "price": 1245,
-        "inStock": false
-      }
-    ],
-
-
-
-    "carGoods": [
-      {
-        "id": 1,
-        "name": "carGood",
-        "price": 1245,
-        "inStock": true
-      }
-    ]
-
-
-
-
+  "attributes": [
+    {
+      "id": 1,
+      "attributes": [
+        {
+          "name": "diameter",
+          "value": "12"
+        },
+        {
+          "name": "numberMountingHoles",
+          "value": "3"
+        },
+        {
+          "name": "departure",
+          "value": "10"
+        },
+        {
+          "name": "сenterHoleDiameter",
+          "value": "54,1"
+        },
+        {
+          "name": "pcd",
+          "value": "98"
+        },
+        {
+          "name": "rimWidth",
+          "value": "98"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "attributes": [
+        {
+          "name": "diameter",
+          "value": "10"
+        },
+        {
+          "name": "seasonality",
+          "value": "Летняя"
+        },
+        {
+          "name": "width",
+          "value": "5.00"
+        },
+        {
+          "name": "brand",
+          "value": "Aeolus"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "attributes": [
+        {
+          "name": "diameter",
+          "value": "13"
+        },
+        {
+          "name": "numberMountingHoles",
+          "value": "4"
+        },
+        {
+          "name": "departure",
+          "value": "16"
+        },
+        {
+          "name": "сenterHoleDiameter",
+          "value": "56,1"
+        },
+        {
+          "name": "pcd",
+          "value": "100"
+        },
+        {
+          "name": "rimWidth",
+          "value": "100"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "attributes": [
+        {
+          "name": "diameter",
+          "value": "12"
+        },
+        {
+          "name": "seasonality",
+          "value": "Зимняя"
+        },
+        {
+          "name": "width",
+          "value": "6.00"
+        },
+        {
+          "name": "brand",
+          "value": "Cordiant"
+        }
+      ]
+    }
+  ]
 }

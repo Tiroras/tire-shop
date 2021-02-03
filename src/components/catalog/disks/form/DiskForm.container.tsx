@@ -7,16 +7,21 @@ import {reduxForm} from "redux-form";
 
 interface IState {
   data: ISelectItem[];
+  input: string;
 }
 
-const DisksFormContainer = (props: any) => {
+const DisksFormContainer = (props) => {
   return(
-    <CatalogForm data={props.data} />
+    <CatalogForm
+      data={props.data}
+      input={props.input}
+    />
   )
 }
 
 let mapStateToProps = (state) => ({
-  data: state.disksData.disks
+  data: state.catFormsData.forms.disks.selectItems,
+  input: state.catFormsData.forms.disks.input
 })
 
 const DisksSearch = reduxForm({form: "searchDisksForm"})(DisksFormContainer)

@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
-import BuyButton from "../product/BuyButton";
+import BuyButtonContainer from "../product/BuyButton.container";
 
 
 interface IProps {
+  id: number;
   name: string;
   price: number;
   img: string;
   inStock: boolean;
+  addToCart: (id: number) => void;
 }
 
 const Layout = styled.div`
@@ -54,7 +56,7 @@ const ListItem = (props: IProps) => {
   return(
     <Layout>
       <div>
-        <img src={props.img != null ? props.img : "/wheelImg.png"}/>
+        <img src={props.img != null ? props.img : "/images/wheelImg.png"}/>
       </div>
       <div>
         {props.name}
@@ -67,7 +69,7 @@ const ListItem = (props: IProps) => {
           {props.inStock ? "В наличии" : "Нет в наличии"}
         </span>
       </div>
-      {props.inStock && <BuyButton />}
+      {props.inStock && <BuyButtonContainer id={props.id} addToCart={props.addToCart} />}
     </Layout>
   )
 }

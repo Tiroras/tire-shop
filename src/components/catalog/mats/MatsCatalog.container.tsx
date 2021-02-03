@@ -1,22 +1,19 @@
 import React, {useEffect} from 'react'
 import {IProductData} from "../../../interfaces/catalog/ICatalog";
-import {catalogAPI} from "../../../api/api";
 import {connect} from "react-redux";
-import {setMatsAC} from "../../../redux/products/products-reducer";
+import {getProducts} from "../../../redux/products/products-reducer";
 import MatsCatalog from "./MatsCatalog";
 
 
 interface IProps {
   data: IProductData[];
   type: string;
-  setMatsAC: (type: string) => {type: string, data: IProductData[]};
+  getProducts: (type: string) => void;
 }
 
 const MatsCatalogContainer = (props: IProps) => {
   useEffect(() => {
-    catalogAPI.getProducts(props.type).then(response => {
-      props.setMatsAC(response);
-    })
+    props.getProducts(props.type)
   }, [])
   return(
     <MatsCatalog
@@ -30,4 +27,4 @@ const mapStateToProps = (state) => ({
   data: state.productsData.products.mats
 })
 
-export default connect(mapStateToProps, {setMatsAC})(MatsCatalogContainer)
+export default connect(mapStateToProps, {getProducts})(MatsCatalogContainer)

@@ -11,12 +11,16 @@ interface IProps {
 
 const TiresFormContainer = (props: any) => {
   return(
-    <CatalogForm data={props.data} />
+    <CatalogForm
+      data={props.data}
+      input={props.input}
+    />
   )
 }
 
 let mapStateToProps = (state) => ({
-  data: state.tiresData.tires
+  data: state.catFormsData.forms.tires.selectItems,
+  input: state.catFormsData.forms.tires.input
 })
 
 const TiresSearch = reduxForm({form: "searchTiresForm"})(TiresFormContainer)

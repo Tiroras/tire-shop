@@ -8,6 +8,7 @@ interface IProps {
 }
 
 const GoToPurchaseContainer = (props: IProps) => {
+
   return(
     <GoToPurchase totalPrice={props.totalPrice}/>
   )

@@ -1,9 +1,10 @@
 import {IDisk, IProduct, ITire} from "../../interfaces/catalog/IProducts.type";
+import {catalogAPI} from "../../api/api";
 
 
 interface IProducts {
-  disks: IDisk[];
-  tires: ITire[];
+  disks: IProduct[];
+  tires: IProduct[];
   mats: IProduct[];
   carGoods: IProduct[];
 };
@@ -25,12 +26,17 @@ const SET_PRODUCTS_TIRES = "SET-PRODUCTS-TIRES";
 const SET_PRODUCTS_MATS = "SET-PRODUCTS-MATS";
 const SET_PRODUCTS_CARGOODS = "SET-PRODUCTS-CARGOODS";
 
+const disks = "disks";
+const tires = "tires";
+const mats = "mats";
+const carGoods = "carGoods";
+
 const initialState: IState = {
   types: {
-    disks: "disks",
-    tires: "tires",
-    mats: "mats",
-    carGoods: "carGoods"
+    disks: disks,
+    tires: tires,
+    mats: mats,
+    carGoods: carGoods
   },
   products: {
     disks: [],
@@ -39,6 +45,7 @@ const initialState: IState = {
     carGoods: [],
   }
 }
+
 
 const productsReducer = (state: IState = initialState, action) => {
   switch (action.type) {
@@ -62,5 +69,57 @@ export const setCarGoodsAC = (data) => ({type: SET_PRODUCTS_CARGOODS, data});
 export const setMatsAC = (data) => ({type: SET_PRODUCTS_MATS, data});
 export const setTiresAC = (data) => ({type: SET_PRODUCTS_TIRES, data});
 export const setDisksAC = (data) => ({type: SET_PRODUCTS_DISKS, data});
+
+
+export const getProducts = (type: string) => (dispatch) => {
+  catalogAPI.getProducts(type).then(response => {
+    switch (type) {
+      case disks: {
+        dispatch(setDisksAC(response));
+        break;
+      }
+      case tires: {
+        dispatch(setTiresAC(response));
+        break;
+      }
+      case mats: {
+        dispatch(setMatsAC(response));
+        break;
+      }
+      case carGoods: {
+        dispatch(setCarGoodsAC(response));
+        break;
+      }
+      default: {
+        dispatch(setCarGoodsAC(response));
+        break;
+      }
+    }
+  });
+}
+
+export const searchProductByName = (type: string, name: string) => (dispatch) => {
+  catalogAPI.getProductByName(type, name).then(response => {
+    switch (type) {
+      case disks: {
+        dispatch(setDisksAC(response));
+        break;
+      }
+      case tires: {
+        dispatch(setTiresAC(response));
+        break;
+      }
+      case mats: {
+        dispatch(setMatsAC(response));
+        break;
+      }
+      case carGoods: {
+        dispatch(setCarGoodsAC(response));
+        break;
+      }
+      default: console.log("Something wrong"); break
+    }
+  })
+}
 
 export default productsReducer;

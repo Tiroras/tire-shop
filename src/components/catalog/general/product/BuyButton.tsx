@@ -1,11 +1,16 @@
 import React from 'react';
 
 
-const BuyButton = (props) => {
+interface IProps {
+  id: number;
+  sendToCart: () => any;
+}
+
+const BuyButton = (props: IProps) => {
   return(
     <div className={"buyBlock"}>
       <span>
-        <button>
+        <button onClick={props.sendToCart}>
           В корзину
         </button>
       </span>

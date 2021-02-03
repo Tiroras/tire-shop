@@ -2,13 +2,17 @@ import React from 'react'
 import CatalogSelect from "./CatalogSelect";
 import {ISelectItem} from "../../../../interfaces/catalog/ICatalog";
 import styled from "styled-components";
+import {Input} from "../../../general/form/FormControls";
+import {reduxForm, Field} from "redux-form";
+import {maxLengthCreactor} from "../../../../utility/validators/validators";
 
 
 interface IProps {
   data: ISelectItem[];
+  input: string;
 }
 
-const FormBlock = styled.form`
+const FormBlock = styled.div`
   background-color: #3e94d1;
   color: white;
   display: flex;
@@ -26,10 +30,19 @@ const Button = styled.button`
   border: 0;
   padding: 1vh 2vw;
 `
+const MaxLength = maxLengthCreactor(40);
 
-const CatalogForm = (props: IProps) => {
+const CatalogForm = (props) => {
   return(
     <FormBlock>
+      <Field
+        name={"name"}
+        id={"name"}
+        component={Input}
+        placeholder={"Поиск"}
+        validate={[MaxLength]}
+        value={props.input}
+      />
       {props.data.map((prop) => (
         <CatalogSelect data={prop} key={prop.name} />
       ))}

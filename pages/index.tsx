@@ -6,7 +6,6 @@ import MainPage from "../src/components/main-page/MainPage";
 export default function Home() {
   return (
     <MainLayout>
-      Привет андрей
       <MainPage />
     </MainLayout>
   )

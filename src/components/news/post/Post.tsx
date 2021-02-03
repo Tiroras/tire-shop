@@ -16,6 +16,7 @@ const Layout = styled.div`
   border-radius: 10px;
   border: 2px solid #a9a9a9;
   padding: 2vh 2vh 0 2vh;
+  margin: 2vh 0;
 `;
 
 const Header = styled.div`

@@ -2,21 +2,18 @@ import {connect} from "react-redux";
 import React, {useEffect} from "react";
 import Disks from "./DisksCatalog";
 import {IProductData} from "../../../interfaces/catalog/ICatalog";
-import {catalogAPI} from "../../../api/api";
-import {setDisksAC} from "../../../redux/products/products-reducer";
+import {getProducts} from "../../../redux/products/products-reducer";
 
 
 interface IProps {
   data: IProductData[];
   type: string;
-  setDisksAC: (type: string) => {type: string, data: IProductData[]};
+  getProducts: (type: string) => void;
 }
 
 const DisksContainer = (props: IProps) => {
   useEffect(() => {
-    catalogAPI.getProducts(props.type).then(response => {
-      props.setDisksAC(response);
-    })
+    props.getProducts(props.type)
   }, [])
   return(
     <Disks
@@ -30,4 +27,4 @@ const mapStateToProps = (state) => ({
     data: state.productsData.products.disks
 })
 
-export default connect(mapStateToProps, {setDisksAC})(DisksContainer)
+export default connect(mapStateToProps, {getProducts})(DisksContainer)

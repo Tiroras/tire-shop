@@ -8,6 +8,12 @@ import Link from "next/link";
 import styled from "styled-components";
 
 
+const Layout = styled.div`
+  h1{
+    text-align: center;
+  }
+`;
+
 const CFormsBlock = styled.div`
   display: flex;
   flex-direction: row;
@@ -24,10 +30,10 @@ const FormBlock = styled.div`
 
 const MainPage = () => {
   return(
-    <div>
+    <Layout>
       <div>
         <div>
-          Подберите для себя шины и диски
+          <h1>Подберите для себя шины и диски</h1>
         </div>
         <CFormsBlock>
           <FormBlock>
@@ -57,7 +63,7 @@ const MainPage = () => {
           <Link href={"/contacts"}><a>Подробнее</a></Link>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 

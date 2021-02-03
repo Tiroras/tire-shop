@@ -15,7 +15,6 @@ const CartItem = (props: IProps) => {
       <span>
         <img src={props.img} />
       </span>
-
       <span>
         <span>
           <div>
@@ -25,7 +24,6 @@ const CartItem = (props: IProps) => {
             {props.price} руб./шт
           </div>
         </span>
-
         <span>
           <CounterContainer />
 

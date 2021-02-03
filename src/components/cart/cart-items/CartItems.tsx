@@ -13,25 +13,47 @@ interface IData{
 
 interface IProps {
   data: IData[];
+  clearCart: () => void;
 }
 
 const Layout = styled.div`
   height: 800px;
   border: 2px solid #a9a9a9;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: 3vh 0;
+  color: white;
+  font-size: 4vh;
+  background-color: #0a64a4;
 `;
 
 const CartItems = (props: IProps) => {
   return(
     <Layout>
-      {props.data.map((prop: IData) => (
-        <CartItem
-          key={prop.id}
-          name={prop.name}
-          img={prop.img}
-          price={prop.price}
-          totalPrice={prop.totalPrice}
-        />
-      ))}
+      <div>
+        {props.data.map((prop: IData) => (
+          <CartItem
+            key={prop.id}
+            name={prop.name}
+            img={prop.img}
+            price={prop.price}
+            totalPrice={prop.totalPrice}
+          />
+        ))}
+      </div>
+      <div>
+        <Button onClick={props.clearCart}>
+          Очистить корзину
+        </Button>
+      </div>
     </Layout>
   )
 }

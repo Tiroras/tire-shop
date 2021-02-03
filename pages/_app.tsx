@@ -3,11 +3,20 @@ import type { AppProps /*, AppContext */ } from 'next/app'
 import {Provider} from "react-redux";
 import {wrapper} from "../src/redux/reducer";
 import React from "react";
+import NextNProgress from "nextjs-progressbar";
 
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <Component {...pageProps} />
+    <>
+      <NextNProgress
+        color={"white"}
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
+      <Component {...pageProps} />
+    </>
     )
 }
 
