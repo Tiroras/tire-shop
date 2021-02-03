@@ -1,18 +1,27 @@
 import React from 'react';
 import Link from "next/link";
+import styled from "styled-components";
 
+
+const Layout = styled.div`
+  text-align: center;
+  h3{
+    font-size: 3vh;
+  }
+  img{
+    width: 70%;
+  }
+`;
 
 const PopularDisks = () => {
   return(
-    <div>
+    <Layout>
       <h3>Популярные модели дисков</h3>
-      <div>
-        <Link href={"/catalog/disks"}><a>Все диски</a></Link>
-      </div>
-      <div>
+        <Link href={"/catalog/disks"}><a>
+          <img src={"images/disks/disks.jpg"}/>
+        </a></Link>
 
-      </div>
-    </div>
+    </Layout>
   )
 }
 

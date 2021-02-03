@@ -15,6 +15,11 @@ const Layout = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  img{
+      margin: auto;
+      width: 200px;
+      height: 200px;
+    }
 `;
 
 const CatalogItems = (props: IProps) => {

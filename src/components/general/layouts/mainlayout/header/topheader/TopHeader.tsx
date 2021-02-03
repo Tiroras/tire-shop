@@ -27,15 +27,15 @@ const TopHeader = () => {
       <RightPart>
         <HeaderCartContainer />
 
-        <span className="log_in-out_links">
-          <LogLink>
-            <Link href="/login"><a>Войти</a></Link>
-          </LogLink>
+        {/*<span className="log_in-out_links">*/}
+        {/*  <LogLink>*/}
+        {/*    <Link href="/login"><a>Войти</a></Link>*/}
+        {/*  </LogLink>*/}
 
-          <LogLink>
-            <Link href="/registration"><a>Регистрация</a></Link>
-          </LogLink>
-        </span>
+        {/*  <LogLink>*/}
+        {/*    <Link href="/registration"><a>Регистрация</a></Link>*/}
+        {/*  </LogLink>*/}
+        {/*</span>*/}
       </RightPart>
     </StyledTopHeader>
   )

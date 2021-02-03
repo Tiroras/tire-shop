@@ -4,7 +4,7 @@ import {ISelectItem} from "../../../../interfaces/catalog/ICatalog";
 import styled from "styled-components";
 import {Input} from "../../../general/form/FormControls";
 import {reduxForm, Field} from "redux-form";
-import {maxLengthCreactor} from "../../../../utility/validators/validators";
+import {maxLengthCreator} from "../../../../utility/validators/validators";
 
 
 interface IProps {
@@ -30,18 +30,17 @@ const Button = styled.button`
   border: 0;
   padding: 1vh 2vw;
 `
-const MaxLength = maxLengthCreactor(40);
+const MaxLength = maxLengthCreator(40);
 
 const CatalogForm = (props) => {
   return(
-    <FormBlock>
+    <FormBlock onSubmit={props.handleSubmit}>
       <Field
-        name={"name"}
-        id={"name"}
+        name={props.input}
+        id={props.input}
         component={Input}
         placeholder={"Поиск"}
         validate={[MaxLength]}
-        value={props.input}
       />
       {props.data.map((prop) => (
         <CatalogSelect data={prop} key={prop.name} />

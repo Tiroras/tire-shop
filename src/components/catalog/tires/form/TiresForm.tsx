@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import {reduxForm, Field} from "redux-form";
+import styled from "styled-components";
 import {Input} from "../../../general/form/FormControls";
 import {maxLengthCreator} from "../../../../utility/validators/validators";
-import styled from "styled-components";
 
 
 const FormBlock = styled.div`
@@ -22,21 +22,21 @@ const StyledInput = styled(Input)`
 
 const MaxLength = maxLengthCreator(40);
 
-const DisksForm = (props) => {
+const TiresForm = (props) => {
   return(
-    <FormBlock>
+    <FormBlock onSubmit={props.handleSubmit}>
       <Field
-        name={"diskName"}
-        id={"diskName"}
+        name={"tiresName"}
+        id={"tiresName"}
         component={StyledInput}
         placeholder={"Поиск"}
         validate={[MaxLength]}
       />
-      <button onSubmit={props.onSubmit}>
+      <button>
         Найти
       </button>
     </FormBlock>
   )
 }
 
-export default reduxForm({form: "disksSearch"})(DisksForm);
+export default reduxForm({form: "tiresSearch"})(TiresForm);

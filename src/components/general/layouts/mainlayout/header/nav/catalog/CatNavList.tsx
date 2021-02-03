@@ -12,7 +12,7 @@ const CatNavList = (props: any) => {
           </Link>
         </li>
         {props.data.list.map((prop) => (
-          <li>
+          <li key={prop.productType}>
             <Link href={prop.productTypeLink}>
               <a>{prop.productType}</a>
             </Link>

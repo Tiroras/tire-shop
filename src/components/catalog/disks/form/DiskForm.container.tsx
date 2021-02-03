@@ -1,29 +1,22 @@
 import React from 'react';
-import {ISelectItem} from "../../../../interfaces/catalog/ICatalog";
 import {connect} from "react-redux";
-import CatalogForm from "../../general/form/CatalogForm";
-import {reduxForm} from "redux-form";
+import {setInput} from "../../../../redux/forms/catalog-forms-reducer";
+import DisksForm from "./DisksForm";
+import {searchProductByName} from "../../../../redux/products/products-reducer";
 
-
-interface IState {
-  data: ISelectItem[];
-  input: string;
-}
 
 const DisksFormContainer = (props) => {
+  let onSubmit = (formData) => {
+    console.log(formData)
+    props.searchProductByName("disks", formData.name)
+    //return props.setInput("disks", formData.name)
+  }
+
   return(
-    <CatalogForm
-      data={props.data}
-      input={props.input}
+    <DisksForm
+      onSubmit={onSubmit}
     />
   )
 }
 
-let mapStateToProps = (state) => ({
-  data: state.catFormsData.forms.disks.selectItems,
-  input: state.catFormsData.forms.disks.input
-})
-
-const DisksSearch = reduxForm({form: "searchDisksForm"})(DisksFormContainer)
-
-export default connect(mapStateToProps)(DisksSearch);
+export default connect(null, {searchProductByName})(DisksFormContainer);

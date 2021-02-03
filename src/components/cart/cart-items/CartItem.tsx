@@ -1,5 +1,6 @@
 import React from 'react';
 import CounterContainer from "../../general/counter/Counter.container";
+import styled from "styled-components";
 
 
 interface IProps {
@@ -9,28 +10,62 @@ interface IProps {
   totalPrice: number;
 }
 
+const Layout = styled.div`
+  display: flex;
+  width: 95%;
+  margin: 1vh auto;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 3vh;
+  background-color: white;
+  img{
+    width: 150px;
+    height: 150px;
+  }
+`;
+
+const RightPart = styled.span`
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+  padding-right: 2vh;
+  width: 90%;
+  margin-left: 4vw;
+  
+`;
+
+const Quantity = styled.span`
+  margin: auto 0;
+`;
+
+const ProductInfo = styled.span`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 const CartItem = (props: IProps) => {
   return(
-    <div>
+    <Layout>
       <span>
-        <img src={props.img} />
+        <img src={props.img ? props.img : "images/wheelImg.png"} />
       </span>
-      <span>
-        <span>
+      <RightPart>
+        <ProductInfo>
           <div>
             {props.name}
           </div>
           <div>
             {props.price} руб./шт
           </div>
-        </span>
-        <span>
-          <CounterContainer />
+        </ProductInfo>
+        {/*<Quantity>*/}
+        {/*  <CounterContainer />*/}
 
-          <span>{props.totalPrice}</span>
-        </span>
-      </span>
-    </div>
+        {/*  <span>{props.totalPrice}</span>*/}
+        {/*</Quantity>*/}
+      </RightPart>
+    </Layout>
   )
 }
 

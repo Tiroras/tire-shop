@@ -23,6 +23,7 @@ let reducer = combineReducers({
   form: formReducer,
 });
 
+
 const initStore = () => {
   return createStore(reducer, applyMiddleware(thunkMiddleware))
 }

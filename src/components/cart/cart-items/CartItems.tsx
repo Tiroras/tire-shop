@@ -23,6 +23,7 @@ const Layout = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background-color: #a9a9a9;
 `;
 
 const Button = styled.button`

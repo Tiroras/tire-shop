@@ -5,14 +5,14 @@ export const required = (value: string) => {
   return "Поле обязательно для заполнения" ;
 }
 
-export const maxLengthCreactor = (length: number) => (value: string) => {
-  if(value && value.length < length){
+export const maxLengthCreator = (length: number) => (value: string) => {
+  if(value && value.length > length){
     return `Максимальное количество символов: ${length}`
   }
   return;
 }
 
-export const minLengthCreactor = (length: number) => (value: string) => {
+export const minLengthCreator = (length: number) => (value: string) => {
   if(value && value.length > length){
     return `Минимальное количество символов: ${length}`
   }

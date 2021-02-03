@@ -16,12 +16,20 @@ const Layout = styled.div`
 
 const CFormsBlock = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 const FormBlock = styled.div`
-  width: 25%;
+  h3{
+    text-align: center;
+    font-size: 3vh;
+  }
+`;
+
+const More = styled.div`
+  text-align: center;
+  font-size: 3vh;
   h3{
     text-align: center;
     font-size: 3vh;
@@ -49,20 +57,18 @@ const MainPage = () => {
       <div>
         <SearchFeedBack />
       </div>
-      <div>
-        <PopularTires />
-      </div>
+      <PopularTires />
       <div>
         <PopularDisks />
       </div>
-      <div>
-        <div>
+      <More>
+        <h3>
           Адреса наших магазинов
-        </div>
+        </h3>
         <div>
           <Link href={"/contacts"}><a>Подробнее</a></Link>
         </div>
-      </div>
+      </More>
     </Layout>
   )
 }
