@@ -110,9 +110,9 @@ export function makeServer() {
   const server = createServer({
 
     routes() {
-      this.namespace = "http://someapi.api"
+      this.namespace = "http://someapi.api/"
 
-      this.get("/posts", () => {
+      this.get("posts", () => {
         const posts = [
           {
             id: 1,
@@ -208,7 +208,7 @@ export function makeServer() {
         return products;
       })
 
-      this.post("/orders", (schema, request) => {
+      this.post("orders", (schema, request) => {
         return {order: request.requestBody}
       })
     },
