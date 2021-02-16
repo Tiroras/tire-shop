@@ -27,8 +27,7 @@ import MockAdapter from "axios-mock-adapter";
 
 
 const instance = axios.create({
-  withCredentials: true,
-  baseURL: 'http://someapi.api'
+  baseURL: 'http://localhost:4200'
 });
 
 
@@ -111,7 +110,7 @@ export function makeServer() {
   const server = createServer({
 
     routes() {
-      this.namespace = "http://someapi.api"
+      //this.namespace = "http://someapi.api"
 
       this.get("/posts", () => {
         const posts = [
