@@ -114,7 +114,7 @@ export function makeServer() {
     routes() {
       this.namespace = URL
 
-      this.get("posts", () => {
+      this.get("/posts", () => {
         const posts = [
           {
             id: 1,
@@ -132,7 +132,7 @@ export function makeServer() {
         return posts;
       });
 
-      this.get(`products?type:type`, (type) => {
+      this.get(`/products?type:type`, (type) => {
         const products = [
           {
             id: 1,
@@ -210,7 +210,7 @@ export function makeServer() {
         return products;
       })
 
-      this.post("orders", (schema, request) => {
+      this.post("/orders", (schema, request) => {
         return {order: request.requestBody}
       })
     },
