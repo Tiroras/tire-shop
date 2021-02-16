@@ -110,7 +110,7 @@ export function makeServer() {
   const server = createServer({
 
     routes() {
-      this.namespace = "http://someapi.api/"
+      this.namespace = "http://localhost:4200"
 
       this.get("posts", () => {
         const posts = [
