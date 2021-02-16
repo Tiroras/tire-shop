@@ -4,7 +4,10 @@ import {Provider} from "react-redux";
 import wrapper from "../src/redux/reducer";
 import React from "react";
 import NextNProgress from "nextjs-progressbar";
+import {makeServer} from "../src/api/api";
 
+
+makeServer();
 
 function App({ Component, pageProps }: AppProps) {
   return (
