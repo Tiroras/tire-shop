@@ -5,7 +5,7 @@ import {maxLengthCreator} from "../../../../utility/validators/validators";
 import styled from "styled-components";
 
 
-const FormBlock = styled.div`
+const FormBlock = styled.form`
   background-color: #3e94d1;
   color: white;
   display: flex;
@@ -22,17 +22,22 @@ const StyledInput = styled(Input)`
 
 const MaxLength = maxLengthCreator(40);
 
+interface IProps {
+  submitHandler: any;
+}
+
 const DisksForm = (props) => {
+  debugger;
   return(
-    <FormBlock>
+    <FormBlock onSubmit={props.handleSubmit}>
       <Field
         name={"diskName"}
         id={"diskName"}
-        component={StyledInput}
+        component={"input"}
         placeholder={"Поиск"}
         validate={[MaxLength]}
       />
-      <button onSubmit={props.onSubmit}>
+      <button onClick={() => console.log("Tuturu")}>
         Найти
       </button>
     </FormBlock>

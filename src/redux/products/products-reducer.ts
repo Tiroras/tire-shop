@@ -1,4 +1,4 @@
-import {IDisk, IProduct, ITire} from "../../interfaces/catalog/IProducts.type";
+import {IProduct} from "../../interfaces/catalog/IProducts.type";
 import {catalogAPI} from "../../api/api";
 
 
