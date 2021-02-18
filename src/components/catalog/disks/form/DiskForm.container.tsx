@@ -13,7 +13,7 @@ const DisksFormContainer = (props) => {
 
   return(
     <DisksForm
-      //onSubmit={handlerSubmit}
+      onSubmit={handlerSubmit}
     />
   )
 }

@@ -22,12 +22,8 @@ const StyledInput = styled(Input)`
 
 const MaxLength = maxLengthCreator(40);
 
-interface IProps {
-  submitHandler: any;
-}
 
 const DisksForm = (props) => {
-  debugger;
   return(
     <FormBlock onSubmit={props.handleSubmit}>
       <Field
