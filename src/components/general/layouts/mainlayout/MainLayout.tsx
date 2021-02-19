@@ -7,12 +7,12 @@ const StyledMain = styled.main`
   padding: 3vh 6vw;
 `
 
-const MainLayout = ({children}: any) => {
+const MainLayout = (props) => {
   return(
     <>
       <Header />
-      <StyledMain>
-        {children}
+      <StyledMain className={props.className}>
+        {props.children}
       </StyledMain>
     </>
   )
