@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 interface IProps {
   data: ICatalog;
+  className?: string;
 }
 
 const Tabs = styled.div`
@@ -38,25 +39,25 @@ const Tab = styled.div`
 
 const CatalogTabs = (props: IProps) => {
   return(
-    <Tabs>
+    <Tabs className={props.className}>
       <Link href={props.data.tires.sectionLink}>
         <a>
-          <Tab>{props.data.tires.sectionName}</Tab>
+          <Tab className={props.className}>{props.data.tires.sectionName}</Tab>
         </a>
       </Link>
       <Link href={props.data.disks.sectionLink}>
         <a>
-          <Tab>{props.data.disks.sectionName}</Tab>
+          <Tab className={props.className}>{props.data.disks.sectionName}</Tab>
         </a>
       </Link>
       <Link href={props.data.mats.sectionLink}>
         <a>
-          <Tab>{props.data.mats.sectionName}</Tab>
+          <Tab className={props.className}>{props.data.mats.sectionName}</Tab>
         </a>
       </Link>
       <Link href={props.data.carGoods.sectionLink}>
         <a>
-          <Tab>{props.data.carGoods.sectionName}</Tab>
+          <Tab className={props.className}>{props.data.carGoods.sectionName}</Tab>
         </a>
       </Link>
     </Tabs>

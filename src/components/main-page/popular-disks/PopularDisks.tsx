@@ -13,14 +13,15 @@ const Layout = styled.div`
   }
 `;
 
-const PopularDisks = () => {
+const PopularDisks = (props) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <h3>Популярные модели дисков</h3>
-        <Link href={"/catalog/disks"}><a>
+      <Link href={"/catalog/disks"}>
+        <a>
           <img src={"images/disks/disks.jpg"}/>
-        </a></Link>
-
+        </a>
+      </Link>
     </Layout>
   )
 }

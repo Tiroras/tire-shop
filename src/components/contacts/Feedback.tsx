@@ -6,7 +6,6 @@ const Feedback = () => {
   return(
     <div>
       <h3>Обратная связь</h3>
-
       <div>
         <FeedbackFormContainer />
       </div>

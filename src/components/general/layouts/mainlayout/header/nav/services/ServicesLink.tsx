@@ -3,11 +3,11 @@ import Link from "next/link";
 import {DropDownList, StyledA} from "../StylesNav";
 
 
-const ServicesLink = () => {
+const ServicesLink = (props) => {
   return(
-    <DropDownList>
+    <DropDownList className={props.className}>
       <Link href={'/services'}>
-        <StyledA>Услуги</StyledA>
+        <StyledA className={props.className}>Услуги</StyledA>
       </Link>
       <div>
         <ul>

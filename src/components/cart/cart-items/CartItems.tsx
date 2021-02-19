@@ -14,6 +14,7 @@ interface IData{
 interface IProps {
   data: IData[];
   clearCart: () => void;
+  className?: string;
 }
 
 const Layout = styled.div`
@@ -38,7 +39,7 @@ const Button = styled.button`
 
 const CartItems = (props: IProps) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <div>
         {props.data.map((prop: IData) => (
           <CartItem
@@ -51,7 +52,9 @@ const CartItems = (props: IProps) => {
         ))}
       </div>
       <div>
-        <Button onClick={props.clearCart}>
+        <Button
+          className={props.className}
+          onClick={props.clearCart}>
           Очистить корзину
         </Button>
       </div>

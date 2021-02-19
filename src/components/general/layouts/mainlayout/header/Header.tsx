@@ -7,9 +7,9 @@ export const StyledHeader = styled.header`
   color: white;
 `
 
-const Header = () => {
+const Header = (props) => {
   return(
-    <StyledHeader>
+    <StyledHeader className={props.className}>
       <TopHeader />
       <Nav />
     </StyledHeader>

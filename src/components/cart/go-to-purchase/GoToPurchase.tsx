@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 interface IProps {
   totalPrice: number;
+  className?: string;
 }
 
 const Layout = styled.div`
@@ -38,13 +39,13 @@ const TotalPrices = styled.span`
 
 const GoToPurchase = (props: IProps) => {
   return(
-    <Layout>
-      <TotalPrices>
+    <Layout className={props.className}>
+      <TotalPrices className={props.className}>
         Итоговая стоимость: {props.totalPrice ? props.totalPrice : "0"} руб.
       </TotalPrices>
       <Link href={"/cart/ordering"}>
         <a>
-          <StyledLink>Оформить заказ</StyledLink>
+          <StyledLink className={props.className}>Оформить заказ</StyledLink>
         </a>
       </Link>
     </Layout>

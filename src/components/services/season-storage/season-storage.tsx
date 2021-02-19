@@ -8,9 +8,9 @@ const Layout = styled.div`
   }
 `;
 
-const SeasonStorage = () => {
+const SeasonStorage = (props) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <div>
         <h2>Сезонное хранение</h2>
       </div>

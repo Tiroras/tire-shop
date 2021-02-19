@@ -9,6 +9,7 @@ interface IProps {
   header: string;
   text: string;
   date: any;
+  className?: string;
 }
 
 const Layout = styled.div`
@@ -30,13 +31,13 @@ const Date = styled.div`
 
 const Post = (props: IProps) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <Link href={`/news/p/[id]`} as={`/news/p/${props.id}`}>
         <a>
           <div className={"img"}>
             <img src={props.img} />
           </div>
-          <Header>
+          <Header className={props.className}>
             <h3>{props.header}</h3>
           </Header>
         </a>
@@ -44,7 +45,7 @@ const Post = (props: IProps) => {
       <div className={"text"}>
         {props.text}
       </div>
-      <Date>
+      <Date className={props.className}>
         {props.date}
       </Date>
     </Layout>

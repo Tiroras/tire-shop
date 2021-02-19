@@ -43,23 +43,23 @@ const TireType = styled.span`
   }
 `;
 
-const PopularTires = () => {
+const PopularTires = (props) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <h3>Популярные модели шин</h3>
       <div className={"allTires"}>
         <Link href={"/catalog/tires"}><a>Все шины</a></Link>
       </div>
-      <TireTypes>
-        <TireType>
+      <TireTypes className={props.className}>
+        <TireType className={props.className}>
           <Link href={"/catalog/tires"}><a>Зимние шины</a></Link>
           <img src={"images/tires/winter.jpg"} />
         </TireType>
-        <TireType>
+        <TireType className={props.className}>
           <Link href={"/catalog/tires"}><a>Летние шины</a></Link>
           <img src={"images/tires/summer.jpg"} />
         </TireType>
-        <TireType>
+        <TireType className={props.className}>
           <Link href={"/catalog/tires"}><a>Грузовые шины</a></Link>
           <img src={"images/tires/truck.jpeg"} />
         </TireType>

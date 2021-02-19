@@ -18,13 +18,13 @@ const Half = styled.span`
   padding: 4vh 4vw;
 `
 
-const SearchFeedBack = () => {
+const SearchFeedBack = (props) => {
   return(
-    <Layout>
-      <Half>
+    <Layout className={props.className}>
+      <Half className={props.className}>
         Здесь будет картинка
       </Half>
-      <Half>
+      <Half className={props.className}>
         <SearchFeedbackReduxForm />
       </Half>
     </Layout>

@@ -9,6 +9,7 @@ interface IProps {
   price: number;
   img: string;
   inStock: boolean;
+  className?: string;
   addToCart: (id: number) => void;
 }
 
@@ -54,7 +55,7 @@ const Layout = styled.div`
 
 const ListItem = (props: IProps) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <div>
         <img src={props.img != null ? props.img : "/images/wheelImg.png"}/>
       </div>

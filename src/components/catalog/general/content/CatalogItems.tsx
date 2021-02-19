@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItem from "./ListItem";
-import styled from "styled-components";
+import styled, {StyledComponent} from "styled-components";
 import {IProductData} from "../../../../interfaces/catalog/ICatalog";
 
 
@@ -8,6 +8,7 @@ import {IProductData} from "../../../../interfaces/catalog/ICatalog";
 interface IProps {
   data: IProductData[];
   addToCart: (id: number) => void;
+  className?: string;
 }
 
 const Layout = styled.div`
@@ -24,7 +25,7 @@ const Layout = styled.div`
 
 const CatalogItems = (props: IProps) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       {props.data.map((prop: IProductData) => (
         <ListItem
           key={prop.id}
@@ -36,17 +37,6 @@ const CatalogItems = (props: IProps) => {
           addToCart={props.addToCart}
         />
       ))}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={false} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
-      {/*<ListItem img={null} name={"Товар"} inStock={true} price={5000} />*/}
     </Layout>
   )
 }

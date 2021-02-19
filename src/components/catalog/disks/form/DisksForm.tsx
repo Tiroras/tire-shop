@@ -25,7 +25,10 @@ const MaxLength = maxLengthCreator(40);
 
 const DisksForm = (props) => {
   return(
-    <FormBlock onSubmit={props.handleSubmit}>
+    <FormBlock
+      onSubmit={props.handleSubmit}
+      className={props.className}
+    >
       <Field
         name={"diskName"}
         id={"diskName"}

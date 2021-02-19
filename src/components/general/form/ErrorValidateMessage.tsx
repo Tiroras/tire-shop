@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 interface IProps {
   error: string;
+  className?: string;
 }
 
 const ErrorBlock = styled.span`
@@ -16,7 +17,7 @@ const ErrorBlock = styled.span`
 
 const ErrorValidateMessage = (props: IProps) => {
   return(
-    <ErrorBlock>
+    <ErrorBlock className={props.className}>
       {props.error}
     </ErrorBlock>
   )

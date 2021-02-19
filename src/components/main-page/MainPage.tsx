@@ -36,19 +36,19 @@ const More = styled.div`
   }
 `;
 
-const MainPage = () => {
+const MainPage = (props) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <div>
         <div>
           <h1>Подберите для себя шины и диски</h1>
         </div>
-        <CFormsBlock>
-          <FormBlock>
+        <CFormsBlock className={props.className}>
+          <FormBlock className={props.className}>
             <h3>Шины</h3>
             <TiresFormContainer />
           </FormBlock>
-          <FormBlock>
+          <FormBlock className={props.className}>
             <h3>Диски</h3>
             <DisksFormContainer />
           </FormBlock>
@@ -61,7 +61,7 @@ const MainPage = () => {
       <div>
         <PopularDisks />
       </div>
-      <More>
+      <More className={props.className}>
         <h3>
           Адреса наших магазинов
         </h3>

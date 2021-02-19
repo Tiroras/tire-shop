@@ -14,15 +14,12 @@ interface IProps {
 const Product = (props: IProps) => {
   return(
     <div>
-
       <div>
         <img src={props.img != null ? props.img : "/wheelImg.png"}/>
       </div>
       <div>
         {props.name}
       </div>
-
-
       <div>
         <span>
           {props.price} руб.
@@ -31,7 +28,6 @@ const Product = (props: IProps) => {
           {props.inStock ? "В наличии" : "Нет в наличии"}
         </span>
       </div>
-
       {props.inStock && <BuyButton id={props.id} sendToCart={props.sendToCart} /> }
     </div>
   )

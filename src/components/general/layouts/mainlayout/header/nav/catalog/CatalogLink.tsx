@@ -6,14 +6,15 @@ import CatNavList from "./CatNavList";
 
 
 interface IProps {
-  catalog: ICatalog
+  catalog: ICatalog;
+  className?: string;
 }
 
 const CatalogLink = (props: IProps) => {
   return(
-    <DropDownList>
+    <DropDownList className={props.className}>
       <Link href={'/catalog'}>
-        <StyledA>Каталог</StyledA>
+        <StyledA className={props.className}>Каталог</StyledA>
       </Link>
       <div>
         <CatNavList data={props.catalog.tires}/>

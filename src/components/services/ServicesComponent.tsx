@@ -29,27 +29,27 @@ const Block = styled.div`
 `;
 
 
-const ServicesComponent = () => {
+const ServicesComponent = (props) => {
   return(
-    <StyledServicesComponent>
+    <StyledServicesComponent className={props.className}>
       <Link href={"/services/season-storage"}>
         <a>
-          <Block>Сезонное хранение</Block>
+          <Block className={props.className}>Сезонное хранение</Block>
         </a>
       </Link>
       <Link href={"/services/disc-straightening"}>
         <a>
-          <Block>Правка дисков</Block>
+          <Block className={props.className}>Правка дисков</Block>
         </a>
       </Link>
       <Link href={"/services/tier-repair"}>
         <a>
-          <Block>Ремонт шин</Block>
+          <Block className={props.className}>Ремонт шин</Block>
         </a>
       </Link>
       <Link href={"/services/tire-fitting"}>
         <a>
-          <Block>Шиномонтаж</Block>
+          <Block className={props.className}>Шиномонтаж</Block>
         </a>
       </Link>
     </StyledServicesComponent>

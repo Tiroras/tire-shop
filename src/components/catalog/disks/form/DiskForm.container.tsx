@@ -8,7 +8,6 @@ const DisksFormContainer = (props) => {
   const handlerSubmit = (values) => {
     console.log(values)
     props.searchProductByName("disks", values)
-    //return props.setInput("disks", formData.name)
   }
 
   return(

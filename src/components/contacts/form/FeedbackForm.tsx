@@ -1,6 +1,6 @@
 import React from 'react';
 import {Field, reduxForm} from "redux-form";
-import {IContacts, IFDElement} from "../../../interfaces/reducers/IContacts";
+import {IContacts} from "../../../interfaces/reducers/IContacts";
 import {Input, Textarea} from "../../general/form/FormControls";
 import styled from "styled-components";
 
@@ -38,7 +38,7 @@ const Button = styled.button`
 const FeedbackForm = (props) => {
   return(
     <form>
-      <FormBlock>
+      <FormBlock className={props.className}>
         <Field
           name={"email"}
           id={"email"}
@@ -47,7 +47,7 @@ const FeedbackForm = (props) => {
           placeholder={"Введите почту"}
         />
       </FormBlock>
-      <FormBlock>
+      <FormBlock className={props.className}>
         <Field
           name={"userName"}
           id={"userName"}
@@ -55,7 +55,7 @@ const FeedbackForm = (props) => {
           placeholder={"Введите имя"}
         />
       </FormBlock>
-      <FormBlock>
+      <FormBlock className={props.className}>
         <Field
           name={"number"}
           id={"number"}
@@ -63,7 +63,7 @@ const FeedbackForm = (props) => {
           placeholder={"Введите номер телефона"}
         />
       </FormBlock>
-      <FormBlock>
+      <FormBlock className={props.className}>
         <Field
           name={"message"}
           id={"message"}
@@ -71,8 +71,8 @@ const FeedbackForm = (props) => {
           placeholder={"Введите сообщение"}
         />
       </FormBlock>
-      <FormBlock>
-        <Button>
+      <FormBlock className={props.className}>
+        <Button className={props.className}>
           Отправить
         </Button>
       </FormBlock>

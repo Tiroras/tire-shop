@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import {LogLink, StyledTopHeader, TopHeaderLeftPart} from "./StyledTopHeader";
+import {StyledTopHeader, TopHeaderLeftPart} from "./StyledTopHeader";
 import HeaderCartContainer from "./header-cart/HeaderCart.container";
 import styled from "styled-components";
 
@@ -11,10 +11,10 @@ const RightPart = styled.span`
   width: 25%;
 `;
 
-const TopHeader = () => {
+const TopHeader = (props) => {
   return(
-    <StyledTopHeader>
-      <TopHeaderLeftPart>
+    <StyledTopHeader className={props.className}>
+      <TopHeaderLeftPart className={props.className}>
         <Link href={'/'}>
           <a><h1>Салон Шива</h1></a>
         </Link>
@@ -24,18 +24,8 @@ const TopHeader = () => {
         </span>
       </TopHeaderLeftPart>
 
-      <RightPart>
+      <RightPart className={props.className}>
         <HeaderCartContainer />
-
-        {/*<span className="log_in-out_links">*/}
-        {/*  <LogLink>*/}
-        {/*    <Link href="/login"><a>Войти</a></Link>*/}
-        {/*  </LogLink>*/}
-
-        {/*  <LogLink>*/}
-        {/*    <Link href="/registration"><a>Регистрация</a></Link>*/}
-        {/*  </LogLink>*/}
-        {/*</span>*/}
       </RightPart>
     </StyledTopHeader>
   )

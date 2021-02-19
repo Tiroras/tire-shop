@@ -11,13 +11,13 @@ interface IProps {
 }
 
 const ListItemContainer = (props: IProps) => {
-  let [isHover, setHover] = useState<boolean>(false)
+  const [isHover, setHover] = useState<boolean>(false)
 
-  let showBuyBlock = (isHover: boolean) => {
+  const showBuyBlock = (isHover: boolean) => {
     switch (isHover) {
       case true: return setHover(false) ;
       case false: return setHover(true)
-      default: return isHover;
+      default: return setHover(false);
     }
   }
 

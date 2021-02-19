@@ -11,7 +11,6 @@ const MainLayout = ({children}: any) => {
   return(
     <>
       <Header />
-
       <StyledMain>
         {children}
       </StyledMain>

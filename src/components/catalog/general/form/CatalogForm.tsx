@@ -34,7 +34,9 @@ const MaxLength = maxLengthCreator(40);
 
 const CatalogForm = (props) => {
   return(
-    <FormBlock onSubmit={props.handleSubmit}>
+    <FormBlock
+      className={props.className}
+      onSubmit={props.handleSubmit}>
       <Field
         name={props.input}
         id={props.input}
@@ -45,7 +47,9 @@ const CatalogForm = (props) => {
       {props.data.map((prop) => (
         <CatalogSelect data={prop} key={prop.name} />
       ))}
-      <Button type={"submit"}>
+      <Button
+        className={props.className}
+        type={"submit"}>
         Найти
       </Button>
     </FormBlock>

@@ -9,14 +9,13 @@ const Layout = styled.div`
   justify-content: space-between;
 `
 
-const Contacts = () => {
+const Contacts = (props) => {
   return(
     <div>
       <div>
         <h2>Контакты</h2>
       </div>
-
-      <Layout>
+      <Layout className={props.className}>
         <ContactInfo />
         <Feedback />
       </Layout>

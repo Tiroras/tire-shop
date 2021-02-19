@@ -17,9 +17,9 @@ const PostsLayout = styled.div`
 
 const News = (props) => {
   return(
-    <Layout>
+    <Layout className={props.className}>
       <h2>Новости</h2>
-      <PostsLayout>
+      <PostsLayout className={props.className}>
         {props.posts.map((post) => (
           <PostContainer
             id={post.id}
