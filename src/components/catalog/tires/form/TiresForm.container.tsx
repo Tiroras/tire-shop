@@ -6,7 +6,7 @@ import TiresForm from "./TiresForm";
 
 const TiresFormContainer = (props: any) => {
   const handlerSubmit = (values) => {
-    console.log(values.duskName)
+    console.log(values.tiresNameName)
     props.searchProductByName("disks", values.tiresName)
   }
 
