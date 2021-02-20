@@ -29,8 +29,8 @@ const TiresForm = (props) => {
       className={props.className}
       >
       <Field
-        name={"tiresName"}
-        id={"tiresName"}
+        name={"tireName"}
+        id={"tireName"}
         component={"input"}
         placeholder={"Поиск"}
         validate={[MaxLength]}
