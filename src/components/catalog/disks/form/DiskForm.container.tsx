@@ -6,8 +6,8 @@ import {searchProductByName} from "../../../../redux/products/products-reducer";
 
 const DisksFormContainer = (props) => {
   const handlerSubmit = (values) => {
-    console.log(values)
-    props.searchProductByName("disks", values)
+    console.log(values.duskName)
+    props.searchProductByName("disks", values.diskName)
   }
 
   return(
