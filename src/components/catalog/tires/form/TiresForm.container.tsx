@@ -5,14 +5,14 @@ import TiresForm from "./TiresForm";
 
 
 const TiresFormContainer = (props: any) => {
-  let setInput = (formData) => {
-    console.log(formData)
-    //return props.setInput("tires", formData.name)
+  const handlerSubmit = (values) => {
+    console.log(values.duskName)
+    props.searchProductByName("disks", values.tiresName)
   }
 
   return(
     <TiresForm
-      onSubmit={setInput}
+      onSubmit={handlerSubmit}
     />
   )
 }

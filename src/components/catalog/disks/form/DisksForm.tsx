@@ -36,7 +36,7 @@ const DisksForm = (props) => {
         placeholder={"Поиск"}
         validate={[MaxLength]}
       />
-      <button onClick={() => console.log("Tuturu")}>
+      <button>
         Найти
       </button>
     </FormBlock>
