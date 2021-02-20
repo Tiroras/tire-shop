@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {setInput} from "../../../../redux/forms/catalog-forms-reducer";
 import TiresForm from "./TiresForm";
+import {searchProductByName} from "../../../../redux/products/products-reducer";
 
 
-const TiresFormContainer = (props: any) => {
+const TiresFormContainer = (props) => {
   const handlerSubmit = (values) => {
     console.log(values.tiresNameName)
     props.searchProductByName("disks", values.tiresName)
@@ -18,4 +18,4 @@ const TiresFormContainer = (props: any) => {
 }
 
 
-export default connect(null, {setInput})(TiresFormContainer)
+export default connect(null, {searchProductByName})(TiresFormContainer)

@@ -25,8 +25,9 @@ const MaxLength = maxLengthCreator(40);
 const TiresForm = (props) => {
   return(
     <FormBlock
+      onSubmit={props.handleSubmit}
       className={props.className}
-      onSubmit={props.handleSubmit}>
+      >
       <Field
         name={"tiresName"}
         id={"tiresName"}
