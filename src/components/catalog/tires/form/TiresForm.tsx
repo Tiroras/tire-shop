@@ -30,7 +30,7 @@ const TiresForm = (props) => {
       <Field
         name={"tiresName"}
         id={"tiresName"}
-        component={StyledInput}
+        component={"input"}
         placeholder={"Поиск"}
         validate={[MaxLength]}
       />
