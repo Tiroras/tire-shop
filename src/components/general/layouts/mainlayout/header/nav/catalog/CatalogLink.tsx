@@ -15,12 +15,12 @@ const CatalogLink = (props: IProps) => {
       <Link href={'/catalog'}>
         <a className={classes.link}>Каталог</a>
       </Link>
-      <div className={classes.links}>
-        <CatNavList data={props.catalog.tires}/>
-        <CatNavList data={props.catalog.disks}/>
-        <CatNavList data={props.catalog.mats}/>
-        <CatNavList data={props.catalog.carGoods}/>
-      </div>
+      {/*<div className={classes.links}>*/}
+      {/*  <CatNavList data={props.catalog.tires}/>*/}
+      {/*  <CatNavList data={props.catalog.disks}/>*/}
+      {/*  <CatNavList data={props.catalog.mats}/>*/}
+      {/*  <CatNavList data={props.catalog.carGoods}/>*/}
+      {/*</div>*/}
     </div>
   )
 }
