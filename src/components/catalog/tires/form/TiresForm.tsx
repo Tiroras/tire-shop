@@ -5,7 +5,7 @@ import {Input} from "../../../general/form/FormControls";
 import {maxLengthCreator} from "../../../../utility/validators/validators";
 
 
-const FormBlock = styled.div`
+const FormBlock = styled.form`
   background-color: #3e94d1;
   color: white;
   display: flex;
