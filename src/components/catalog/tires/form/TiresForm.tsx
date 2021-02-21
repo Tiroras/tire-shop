@@ -5,7 +5,15 @@ import {Input} from "../../../general/form/FormControls";
 import {maxLengthCreator} from "../../../../utility/validators/validators";
 
 
-const FormBlock = styled.form`
+const Form_block = (props) => {
+  return(
+    <form className={props.className}>
+      {props.children}
+    </form>
+  )
+}
+
+const FormBlock = styled(Form_block)`
   background-color: #3e94d1;
   color: white;
   display: flex;
@@ -16,9 +24,6 @@ const FormBlock = styled.form`
   border-radius:10px;
   width: 410px;
 `;
-const StyledInput = styled(Input)`
-  width: 100%;
-`;
 
 const MaxLength = maxLengthCreator(40);
 
@@ -26,7 +31,6 @@ const TiresForm = (props) => {
   return(
     <FormBlock
       onSubmit={props.handleSubmit}
-      className={props.className}
       >
       <Field
         name={"tireName"}

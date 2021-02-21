@@ -1,6 +1,32 @@
+import React from 'react';
 import styled from "styled-components";
 
-export const StyledNav = styled.nav`
+
+const Nav = (props) => {
+  return(
+    <nav className={props.className}>
+      {props.children}
+    </nav>
+  )
+}
+
+const A = (props) => {
+  return(
+    <a className={props.className}>
+      {props.children}
+    </a>
+  )
+}
+
+const Div = (props) => {
+  return(
+    <div className={props.className}>
+      {props.children}
+    </div>
+  )
+}
+
+export const StyledNav = styled(Nav)`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -17,7 +43,7 @@ export const StyledNav = styled.nav`
   border-bottom: none;
 `;
 
-export const StyledA = styled.a`
+export const StyledA = styled(A)`
   padding: 2vh 5vw;
   :hover{
     background-color: #ff9540;
@@ -28,7 +54,7 @@ export const StyledA = styled.a`
   }
 `;
 
-export const DropDownList = styled.div`
+export const DropDownList = styled(Div)`
   :hover div{
     display: flex;
     align-items: baseline;
