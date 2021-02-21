@@ -9,7 +9,7 @@ const ServicesLink = () => {
       <Link href={'/services'}>
         <a className={classes.link}>Услуги</a>
       </Link>
-      <div>
+      <div className={classes.links}>
         <ul>
           <li>
             <Link href={"/services/season-storage"}><a>Сезонное хранение</a></Link>

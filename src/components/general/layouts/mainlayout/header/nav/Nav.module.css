@@ -50,3 +50,9 @@
 .DropDownList li:hover{
     background-color: #ff9540;
 }
+
+@media (max-width: 800px) {
+    .links{
+       display: none;
+    }
+}
