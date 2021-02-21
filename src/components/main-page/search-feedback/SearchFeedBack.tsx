@@ -7,7 +7,7 @@ const SearchFeedBack = () => {
   return(
     <div className={classes.layout}>
       <span className={classes.half}>
-        Здесь будет картинка
+        <img src={"images/feedbackform.png"} />
       </span>
       <span className={classes.half}>
         <SearchFeedbackReduxForm />
