@@ -5,7 +5,15 @@ import {maxLengthCreator} from "../../../../utility/validators/validators";
 import styled from "styled-components";
 
 
-const FormBlock = styled.form`
+const FormBlock = (props) => {
+  return(
+    <form className={props.className}>
+      {props.children}
+    </form>
+  )
+}
+
+const StyledFormBlock = styled(FormBlock)`
   background-color: #3e94d1;
   color: white;
   display: flex;
@@ -16,18 +24,13 @@ const FormBlock = styled.form`
   border-radius:10px;
   width: 410px;
 `;
-const StyledInput = styled(Input)`
-  width: 100%;
-`;
 
 const MaxLength = maxLengthCreator(40);
 
-
 const DisksForm = (props) => {
   return(
-    <FormBlock
+    <StyledFormBlock
       onSubmit={props.handleSubmit}
-      className={props.className}
     >
       <Field
         name={"diskName"}
@@ -39,7 +42,7 @@ const DisksForm = (props) => {
       <button>
         Найти
       </button>
-    </FormBlock>
+    </StyledFormBlock>
   )
 }
 

@@ -9,7 +9,15 @@ interface IProps {
   className?: string;
 }
 
-const Tabs = styled.div`
+const Div = (props) => {
+  return(
+    <div className={props.className}>
+      {props.children}
+    </div>
+  )
+}
+
+const Tabs = styled(Div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +26,7 @@ const Tabs = styled.div`
   overflow: hidden;
 `;
 
-const Tab = styled.div`
+const Tab = styled(Div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,25 +47,25 @@ const Tab = styled.div`
 
 const CatalogTabs = (props: IProps) => {
   return(
-    <Tabs className={props.className}>
+    <Tabs>
       <Link href={props.data.tires.sectionLink}>
         <a>
-          <Tab className={props.className}>{props.data.tires.sectionName}</Tab>
+          <Tab>{props.data.tires.sectionName}</Tab>
         </a>
       </Link>
       <Link href={props.data.disks.sectionLink}>
         <a>
-          <Tab className={props.className}>{props.data.disks.sectionName}</Tab>
+          <Tab>{props.data.disks.sectionName}</Tab>
         </a>
       </Link>
       <Link href={props.data.mats.sectionLink}>
         <a>
-          <Tab className={props.className}>{props.data.mats.sectionName}</Tab>
+          <Tab>{props.data.mats.sectionName}</Tab>
         </a>
       </Link>
       <Link href={props.data.carGoods.sectionLink}>
         <a>
-          <Tab className={props.className}>{props.data.carGoods.sectionName}</Tab>
+          <Tab>{props.data.carGoods.sectionName}</Tab>
         </a>
       </Link>
     </Tabs>

@@ -13,7 +13,15 @@ interface IProps {
   addToCart: (id: number) => void;
 }
 
-const Layout = styled.div`
+const Div = (props) => {
+  return(
+    <div className={props.className}>
+      {props.children}
+    </div>
+  )
+}
+
+const Layout = styled(Div)`
   border: 3px solid #a9a9a9;
   border-radius: 15px;
   padding: 0 2vw;
@@ -32,11 +40,9 @@ const Layout = styled.div`
       height: 200px;
     }
   }
-  
   .buyBlock{
     display: none;
   }
-  
   :hover{
     z-index: 1000;
     position: relative;
@@ -47,7 +53,6 @@ const Layout = styled.div`
       
     }
   }
-  
   button{
     padding:1vh 2vh;
   }
@@ -55,7 +60,7 @@ const Layout = styled.div`
 
 const ListItem = (props: IProps) => {
   return(
-    <Layout className={props.className}>
+    <Layout>
       <div>
         <img src={props.img != null ? props.img : "/images/wheelImg.png"}/>
       </div>

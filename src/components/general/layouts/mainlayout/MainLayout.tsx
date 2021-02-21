@@ -3,7 +3,15 @@ import Header from "./header/Header";
 import styled from "styled-components";
 
 
-const StyledMain = styled.main`
+const Main = (props) => {
+  return(
+    <main className={props.className}>
+      {props.children}
+    </main>
+  )
+}
+
+const StyledMain = styled(Main)`
   padding: 3vh 6vw;
 `
 
@@ -11,7 +19,7 @@ const MainLayout = (props) => {
   return(
     <>
       <Header />
-      <StyledMain className={props.className}>
+      <StyledMain>
         {props.children}
       </StyledMain>
     </>

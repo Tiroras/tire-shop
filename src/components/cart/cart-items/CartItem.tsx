@@ -10,7 +10,23 @@ interface IProps {
   totalPrice: number;
 }
 
-const Layout = styled.div`
+const Div = (props) => {
+  return(
+    <div className={props.className}>
+      {props.children}
+    </div>
+  )
+}
+
+const Span = (props) => {
+  return(
+    <Span className={props.className}>
+      {props.children}
+    </Span>
+  )
+}
+
+const Layout = styled(Div)`
   display: flex;
   width: 95%;
   margin: 1vh auto;
@@ -24,7 +40,7 @@ const Layout = styled.div`
   }
 `;
 
-const RightPart = styled.span`
+const RightPart = styled(Span)`
   display: flex;
   justify-content: space-between;
   padding: 2vh 0;
@@ -34,11 +50,11 @@ const RightPart = styled.span`
   
 `;
 
-const Quantity = styled.span`
+const Quantity = styled(Span)`
   margin: auto 0;
 `;
 
-const ProductInfo = styled.span`
+const ProductInfo = styled(Span)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,11 +75,6 @@ const CartItem = (props: IProps) => {
             {props.price} руб./шт
           </div>
         </ProductInfo>
-        {/*<Quantity>*/}
-        {/*  <CounterContainer />*/}
-
-        {/*  <span>{props.totalPrice}</span>*/}
-        {/*</Quantity>*/}
       </RightPart>
     </Layout>
   )

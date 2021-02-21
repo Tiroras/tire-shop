@@ -11,7 +11,15 @@ interface IProps {
   className?: string;
 }
 
-const Layout = styled.div`
+const Div = (props) => {
+  return(
+    <div className={props.className}>
+      {props.children}
+    </div>
+  )
+}
+
+const Layout = styled(Div)`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +33,7 @@ const Layout = styled.div`
 
 const CatalogItems = (props: IProps) => {
   return(
-    <Layout className={props.className}>
+    <Layout>
       {props.data.map((prop: IProductData) => (
         <ListItem
           key={prop.id}

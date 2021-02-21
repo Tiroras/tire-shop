@@ -2,13 +2,21 @@ import React from 'react';
 import styled from "styled-components";
 
 
-const Layout = styled.div`
+const Div = (props) => {
+  return(
+    <div className={props.className}>
+      {props.children}
+    </div>
+  )
+}
+
+const Layout = styled(Div)`
   text-align: center;
 `;
 
-const ThereNothing = (props) => {
+const ThereNothing = () => {
   return(
-    <Layout className={props.className}>
+    <Layout>
       Упс! Здесь ничего нет
     </Layout>
   )

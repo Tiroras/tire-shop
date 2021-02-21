@@ -17,7 +17,23 @@ interface IProps {
   className?: string;
 }
 
-const Layout = styled.div`
+const Div = (props) => {
+  return(
+    <div className={props.className}>
+      {props.children}
+    </div>
+  )
+}
+
+const Button = (props) => {
+  return (
+    <button className={props.className}>
+      {props.children}
+    </button>
+  )
+}
+
+const Layout = styled(Div)`
   height: 800px;
   border: 2px solid #a9a9a9;
   transition: 0.3s;
@@ -27,7 +43,7 @@ const Layout = styled.div`
   background-color: #a9a9a9;
 `;
 
-const Button = styled.button`
+const StyledButton = styled(Button)`
   width: 100%;
   border: 0;
   border-radius: 0;
@@ -39,7 +55,7 @@ const Button = styled.button`
 
 const CartItems = (props: IProps) => {
   return(
-    <Layout className={props.className}>
+    <Layout>
       <div>
         {props.data.map((prop: IData) => (
           <CartItem
@@ -52,11 +68,10 @@ const CartItems = (props: IProps) => {
         ))}
       </div>
       <div>
-        <Button
-          className={props.className}
+        <StyledButton
           onClick={props.clearCart}>
           Очистить корзину
-        </Button>
+        </StyledButton>
       </div>
     </Layout>
   )

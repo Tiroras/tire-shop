@@ -7,7 +7,6 @@ import CatNavList from "./CatNavList";
 
 interface IProps {
   catalog: ICatalog;
-  className?: string;
 }
 
 const CatalogLink = (props: IProps) => {
