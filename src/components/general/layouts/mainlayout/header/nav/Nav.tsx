@@ -5,22 +5,22 @@ import CatalogLinkContainer from "./catalog/CatalogLinkContainer";
 import {StyledNav, StyledA} from "./StylesNav";
 
 
-const Nav = (props) => {
+const Nav = () => {
   return(
-    <StyledNav className={props.className}>
+    <StyledNav>
       <Link href={'/'}>
-        <StyledA className={props.className}>Главная</StyledA>
+        <StyledA>Главная</StyledA>
       </Link>
       <CatalogLinkContainer />
       <ServicesLink />
       <Link href={'/news'}>
-        <StyledA className={props.className}>Новости</StyledA>
+        <StyledA>Новости</StyledA>
       </Link>
       <Link href={'/about-us'}>
-        <StyledA className={props.className}>О нас</StyledA>
+        <StyledA>О нас</StyledA>
       </Link>
       <Link href={'/contacts'}>
-        <StyledA className={props.className}>Контакты</StyledA>
+        <StyledA>Контакты</StyledA>
       </Link>
     </StyledNav>
   )

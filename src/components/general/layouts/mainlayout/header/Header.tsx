@@ -3,13 +3,22 @@ import Nav from "./nav/Nav";
 import TopHeader from "./topheader/TopHeader";
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+
+const HeaderContainer = (props) => {
+  return(
+    <header className={props.className}>
+      {props.children}
+    </header>
+  )
+}
+
+export const StyledHeader = styled(HeaderContainer)`
   color: white;
 `
 
-const Header = (props) => {
+const Header = () => {
   return(
-    <StyledHeader className={props.className}>
+    <StyledHeader>
       <TopHeader />
       <Nav />
     </StyledHeader>

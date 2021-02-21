@@ -5,9 +5,9 @@ import {DropDownList, StyledA} from "../StylesNav";
 
 const ServicesLink = (props) => {
   return(
-    <DropDownList className={props.className}>
+    <DropDownList>
       <Link href={'/services'}>
-        <StyledA className={props.className}>Услуги</StyledA>
+        <StyledA>Услуги</StyledA>
       </Link>
       <div>
         <ul>

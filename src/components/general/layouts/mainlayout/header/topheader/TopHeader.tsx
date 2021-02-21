@@ -5,7 +5,15 @@ import HeaderCartContainer from "./header-cart/HeaderCart.container";
 import styled from "styled-components";
 
 
-const RightPart = styled.span`
+const Span = (props) => {
+  return(
+    <span className={props.className}>
+      {props.children}
+    </span>
+  )
+}
+
+const RightPart = styled(Span)`
   display: flex;
   justify-content: space-between;
   width: 25%;
@@ -13,18 +21,16 @@ const RightPart = styled.span`
 
 const TopHeader = (props) => {
   return(
-    <StyledTopHeader className={props.className}>
-      <TopHeaderLeftPart className={props.className}>
+    <StyledTopHeader>
+      <TopHeaderLeftPart>
         <Link href={'/'}>
           <a><h1>Салон Шива</h1></a>
         </Link>
-
         <span>
           Номер телефона
         </span>
       </TopHeaderLeftPart>
-
-      <RightPart className={props.className}>
+      <RightPart>
         <HeaderCartContainer />
       </RightPart>
     </StyledTopHeader>

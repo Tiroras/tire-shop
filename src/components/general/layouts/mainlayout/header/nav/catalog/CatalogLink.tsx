@@ -12,9 +12,9 @@ interface IProps {
 
 const CatalogLink = (props: IProps) => {
   return(
-    <DropDownList className={props.className}>
+    <DropDownList>
       <Link href={'/catalog'}>
-        <StyledA className={props.className}>Каталог</StyledA>
+        <StyledA>Каталог</StyledA>
       </Link>
       <div>
         <CatNavList data={props.catalog.tires}/>
