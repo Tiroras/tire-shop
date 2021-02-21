@@ -1,7 +1,7 @@
 import React from 'react'
 import {reduxForm, Field} from "redux-form";
 import {maxLengthCreator} from "../../../../utility/validators/validators";
-import classes from "DisksForm.module.css";
+import classes from "./DisksForm.module.css";
 
 const MaxLength = maxLengthCreator(40);
 

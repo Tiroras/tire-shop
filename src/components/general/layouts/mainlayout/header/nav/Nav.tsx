@@ -2,7 +2,7 @@ import React from 'react'
 import Link from "next/link";
 import ServicesLink from "./services/ServicesLink";
 import CatalogLinkContainer from "./catalog/CatalogLinkContainer";
-import classes from "Nav.module.css";
+import classes from "./Nav.module.css";
 
 
 const Nav = () => {

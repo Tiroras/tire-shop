@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import HeaderCartContainer from "./header-cart/HeaderCart.container";
-import classes from "TopHeader.module.css";
+import classes from "./TopHeader.module.css";
 
 
 const TopHeader = () => {

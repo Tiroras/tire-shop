@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./nav/Nav";
 import TopHeader from "./topheader/TopHeader";
-import classes from "Header.module.css";
+import classes from "./Header.module.css";
 
 
 
