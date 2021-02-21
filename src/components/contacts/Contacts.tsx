@@ -1,24 +1,19 @@
 import React from 'react';
 import Feedback from "./Feedback";
 import ContactInfo from "./ContactInfo";
-import styled from "styled-components";
+import classes from "./Contacts.module.css";
 
-const Layout = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`
 
-const Contacts = (props) => {
+const Contacts = () => {
   return(
     <div>
       <div>
         <h2>Контакты</h2>
       </div>
-      <Layout className={props.className}>
+      <div className={classes.layout}>
         <ContactInfo />
         <Feedback />
-      </Layout>
+      </div>
     </div>
   )
 }

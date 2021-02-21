@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from "styled-components";
 import Link from "next/link";
+import classes from "./Post.module.css";
 
 
 interface IProps {
@@ -12,43 +12,26 @@ interface IProps {
   className?: string;
 }
 
-const Layout = styled.div`
-  width: 50%;
-  border-radius: 10px;
-  border: 2px solid #a9a9a9;
-  padding: 2vh 2vh 0 2vh;
-  margin: 2vh 0;
-`;
-
-const Header = styled.div`
-  text-align: center;
-`;
-
-const Date = styled.div`
-  text-align: right;
-  margin-top: 2vh;
-`
-
 const Post = (props: IProps) => {
   return(
-    <Layout className={props.className}>
+    <div className={classes.layout}>
       <Link href={`/news/p/[id]`} as={`/news/p/${props.id}`}>
         <a>
           <div className={"img"}>
             <img src={props.img} />
           </div>
-          <Header className={props.className}>
+          <div className={classes.header}>
             <h3>{props.header}</h3>
-          </Header>
+          </div>
         </a>
       </Link>
       <div className={"text"}>
         {props.text}
       </div>
-      <Date className={props.className}>
+      <div className={classes.date}>
         {props.date}
-      </Date>
-    </Layout>
+      </div>
+    </div>
   )
 }
 

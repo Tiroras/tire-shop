@@ -2,43 +2,17 @@ import React from 'react';
 import {Field, reduxForm} from "redux-form";
 import {IContacts} from "../../../interfaces/reducers/IContacts";
 import {Input, Textarea} from "../../general/form/FormControls";
-import styled from "styled-components";
+import classes from "./FeedBackForm.module.css";
 
 
 interface IProps {
   data: IContacts
 }
 
-const Message = styled(Textarea)`
-  resize: none;
-  height: 15vh;
-  width: 25vw;
-  border-radius: 5px;
-  padding: 0.5vw;
-`;
-
-const FormBlock = styled.div`
-  margin: 1.5vh 0;
-  Input{
-    padding: 0.5vw;
-    border-radius: 5px;
-    border: 1px solid gray;
-  }
-`;
-
-const Button = styled.button`
-  color:white;
-  background-color: #3e94d1;
-  padding: 2vh 3vw;
-  border: 2px solid #a9a9a9;
-  border-radius: 10px;
-  font-weight: bold;
-`;
-
-const FeedbackForm = (props) => {
+const FeedbackForm = () => {
   return(
     <form>
-      <FormBlock className={props.className}>
+      <div className={classes.block}>
         <Field
           name={"email"}
           id={"email"}
@@ -46,36 +20,37 @@ const FeedbackForm = (props) => {
           type={"email"}
           placeholder={"Введите почту"}
         />
-      </FormBlock>
-      <FormBlock className={props.className}>
+      </div>
+      <div className={classes.block}>
         <Field
           name={"userName"}
           id={"userName"}
           component={Input}
           placeholder={"Введите имя"}
         />
-      </FormBlock>
-      <FormBlock className={props.className}>
+      </div>
+      <div className={classes.block}>
         <Field
           name={"number"}
           id={"number"}
           component={Input}
           placeholder={"Введите номер телефона"}
         />
-      </FormBlock>
-      <FormBlock className={props.className}>
+      </div>
+      <div className={classes.block}>
         <Field
           name={"message"}
           id={"message"}
-          component={Message}
+          component={"textarea"}
           placeholder={"Введите сообщение"}
+          className={classes.message}
         />
-      </FormBlock>
-      <FormBlock className={props.className}>
-        <Button className={props.className}>
+      </div>
+      <div className={classes.block}>
+        <button className={classes.button}>
           Отправить
-        </Button>
-      </FormBlock>
+        </button>
+      </div>
     </form>
   )
 }

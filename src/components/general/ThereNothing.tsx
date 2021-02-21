@@ -1,24 +1,12 @@
 import React from 'react';
-import styled from "styled-components";
+import classes from "./ThereNothing.module.css";
 
-
-const Div = (props) => {
-  return(
-    <div className={props.className}>
-      {props.children}
-    </div>
-  )
-}
-
-const Layout = styled(Div)`
-  text-align: center;
-`;
 
 const ThereNothing = () => {
   return(
-    <Layout>
+    <div className={classes.layout}>
       Упс! Здесь ничего нет
-    </Layout>
+    </div>
   )
 }
 

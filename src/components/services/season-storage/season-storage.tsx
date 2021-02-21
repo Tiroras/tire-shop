@@ -1,16 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import classes from "./SeasonStorage.module.css";
 
 
-const Layout = styled.div`
-  h2{
-    text-align: center;
-  }
-`;
-
-const SeasonStorage = (props) => {
+const SeasonStorage = () => {
   return(
-    <Layout className={props.className}>
+    <div className={classes.layout}>
       <div>
         <h2>Сезонное хранение</h2>
       </div>
@@ -20,7 +14,7 @@ const SeasonStorage = (props) => {
         <br />
         За подробностями обратитесь в салон
       </div>
-    </Layout>
+    </div>
   )
 }
 

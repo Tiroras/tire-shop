@@ -1,0 +1,16 @@
+.layout{
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid #a9a9a9;
+    padding: 2vh 2vh 0 2vh;
+    margin: 2vh 0;
+}
+
+.header{
+    text-align: center;
+}
+
+.date{
+    text-align: right;
+    margin-top: 2vh;
+}
