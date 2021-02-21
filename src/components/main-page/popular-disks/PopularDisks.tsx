@@ -1,28 +1,18 @@
 import React from 'react';
 import Link from "next/link";
-import styled from "styled-components";
+import classes from "./PopularDisks.module.css";
 
 
-const Layout = styled.div`
-  text-align: center;
-  h3{
-    font-size: 3vh;
-  }
-  img{
-    width: 70%;
-  }
-`;
-
-const PopularDisks = (props) => {
+const PopularDisks = () => {
   return(
-    <Layout className={props.className}>
+    <div className={classes.layout}>
       <h3>Популярные модели дисков</h3>
       <Link href={"/catalog/disks"}>
         <a>
           <img src={"images/disks/disks.jpg"}/>
         </a>
       </Link>
-    </Layout>
+    </div>
   )
 }
 

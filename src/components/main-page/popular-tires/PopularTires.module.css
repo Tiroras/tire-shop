@@ -1,0 +1,44 @@
+.layout{
+    text-align: center;
+    font-size: 3vh;
+}
+
+.layout h3{
+    font-size: 3vh;
+}
+
+.layout img{
+    border-radius: 50%;
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.allTires{
+    width: 100%;
+    margin: 2vh 0;
+}
+
+.types{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.type{
+    background-color: #3e94d1;
+    color: white;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 2vh;
+    height: 400px;
+    width: 270px;
+    transition: 0.3s;
+}
+
+.type :hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+

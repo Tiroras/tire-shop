@@ -1,0 +1,16 @@
+.layout div{
+    margin: 1vh 0;
+}
+
+.agree{
+    display: flex;
+    align-items: baseline;
+}
+
+.button{
+    border: 0;
+    border-radius: 5px;
+    background-color: #ff9540;
+    color: white;
+    padding: 1vh 2vw;
+}

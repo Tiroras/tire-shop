@@ -1,0 +1,24 @@
+.layout h1{
+    text-align: center;
+}
+
+.forms{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.form h3{
+    text-align: center;
+    font-size: 3vh;
+}
+
+.more{
+    text-align: center;
+    font-size: 3vh;
+}
+
+.more h3{
+    text-align: center;
+    font-size: 3vh;
+}

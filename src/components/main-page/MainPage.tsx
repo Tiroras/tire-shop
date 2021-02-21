@@ -5,54 +5,26 @@ import SearchFeedBack from "./search-feedback/SearchFeedBack";
 import PopularTires from "./popular-tires/PopularTires";
 import PopularDisks from "./popular-disks/PopularDisks";
 import Link from "next/link";
-import styled from "styled-components";
+import classes from "./MainPage.module.css";
 
-
-const Layout = styled.div`
-  h1{
-    text-align: center;
-  }
-`;
-
-const CFormsBlock = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-`;
-
-const FormBlock = styled.div`
-  h3{
-    text-align: center;
-    font-size: 3vh;
-  }
-`;
-
-const More = styled.div`
-  text-align: center;
-  font-size: 3vh;
-  h3{
-    text-align: center;
-    font-size: 3vh;
-  }
-`;
 
 const MainPage = (props) => {
   return(
-    <Layout className={props.className}>
+    <div className={classes.layout}>
       <div>
         <div>
           <h1>Подберите для себя шины и диски</h1>
         </div>
-        <CFormsBlock className={props.className}>
-          <FormBlock className={props.className}>
+        <div className={classes.forms}>
+          <div className={classes.form}>
             <h3>Шины</h3>
             <TiresFormContainer />
-          </FormBlock>
-          <FormBlock className={props.className}>
+          </div>
+          <div className={classes.form}>
             <h3>Диски</h3>
             <DisksFormContainer />
-          </FormBlock>
-        </CFormsBlock>
+          </div>
+        </div>
       </div>
       <div>
         <SearchFeedBack />
@@ -61,15 +33,15 @@ const MainPage = (props) => {
       <div>
         <PopularDisks />
       </div>
-      <More className={props.className}>
+      <div className={classes.more}>
         <h3>
           Адреса наших магазинов
         </h3>
         <div>
           <Link href={"/contacts"}><a>Подробнее</a></Link>
         </div>
-      </More>
-    </Layout>
+      </div>
+    </div>
   )
 }
 
