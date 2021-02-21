@@ -2,29 +2,28 @@ import React from 'react'
 import Link from "next/link";
 import ServicesLink from "./services/ServicesLink";
 import CatalogLinkContainer from "./catalog/CatalogLinkContainer";
-import {StyledNav, StyledA} from "./StylesNav";
+import classes from "Nav.module.css";
 
 
 const Nav = () => {
   return(
-    <StyledNav>
+    <nav className={classes.nav}>
       <Link href={'/'}>
-        <StyledA>Главная</StyledA>
+        <a className={classes.link}>Главная</a>
       </Link>
       <CatalogLinkContainer />
       <ServicesLink />
       <Link href={'/news'}>
-        <StyledA>Новости</StyledA>
+        <a className={classes.link}>Новости</a>
       </Link>
       <Link href={'/about-us'}>
-        <StyledA>О нас</StyledA>
+        <a className={classes.link}>О нас</a>
       </Link>
       <Link href={'/contacts'}>
-        <StyledA>Контакты</StyledA>
+        <a className={classes.link}>Контакты</a>
       </Link>
-    </StyledNav>
+    </nav>
   )
 }
-
 
 export default Nav;

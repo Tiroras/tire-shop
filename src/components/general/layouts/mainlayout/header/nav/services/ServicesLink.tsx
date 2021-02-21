@@ -1,13 +1,13 @@
 import React from 'react'
 import Link from "next/link";
-import {DropDownList, StyledA} from "../StylesNav";
+import classes from "../Nav.module.css";
 
 
-const ServicesLink = (props) => {
+const ServicesLink = () => {
   return(
-    <DropDownList>
+    <div className={classes.DropDownList}>
       <Link href={'/services'}>
-        <StyledA>Услуги</StyledA>
+        <a className={classes.link}>Услуги</a>
       </Link>
       <div>
         <ul>
@@ -25,7 +25,7 @@ const ServicesLink = (props) => {
           </li>
         </ul>
       </div>
-    </DropDownList>
+    </div>
   )
 }
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from "next/link";
-import {DropDownList, StyledA} from "../StylesNav";
 import {ICatalog} from "../../../../../../../interfaces/reducers/INav";
 import CatNavList from "./CatNavList";
+import classes from "../Nav.module.css";
 
 
 interface IProps {
@@ -11,9 +11,9 @@ interface IProps {
 
 const CatalogLink = (props: IProps) => {
   return(
-    <DropDownList>
+    <div className={classes.DropDownList}>
       <Link href={'/catalog'}>
-        <StyledA>Каталог</StyledA>
+        <a className={classes.link}>Каталог</a>
       </Link>
       <div>
         <CatNavList data={props.catalog.tires}/>
@@ -21,7 +21,7 @@ const CatalogLink = (props: IProps) => {
         <CatNavList data={props.catalog.mats}/>
         <CatNavList data={props.catalog.carGoods}/>
       </div>
-    </DropDownList>
+    </div>
   )
 }
 

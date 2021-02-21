@@ -1,39 +1,24 @@
 import React from 'react';
 import Link from "next/link";
-import {StyledTopHeader, TopHeaderLeftPart} from "./StyledTopHeader";
 import HeaderCartContainer from "./header-cart/HeaderCart.container";
-import styled from "styled-components";
+import classes from "TopHeader.module.css";
 
 
-const Span = (props) => {
+const TopHeader = () => {
   return(
-    <span className={props.className}>
-      {props.children}
-    </span>
-  )
-}
-
-const RightPart = styled(Span)`
-  display: flex;
-  justify-content: space-between;
-  width: 25%;
-`;
-
-const TopHeader = (props) => {
-  return(
-    <StyledTopHeader>
-      <TopHeaderLeftPart>
+    <span className={classes.layout}>
+      <span className={classes.left}>
         <Link href={'/'}>
           <a><h1>Салон Шива</h1></a>
         </Link>
         <span>
           Номер телефона
         </span>
-      </TopHeaderLeftPart>
-      <RightPart>
+      </span>
+      <span className={classes.right}>
         <HeaderCartContainer />
-      </RightPart>
-    </StyledTopHeader>
+      </span>
+    </span>
   )
 }
 

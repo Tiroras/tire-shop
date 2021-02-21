@@ -1,0 +1,52 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    position: sticky;
+
+    padding: 0vh 4vw;
+
+    font-size: 2.5vh;
+
+    background-color: #3e94d1;
+
+    border-top: 3px solid #a9a9a9;
+    border-bottom: none;
+}
+
+.link{
+    padding: 2vh 5vw;
+}
+
+.link:hover{
+    background-color: #ff9540;
+    transition: 0.25s;
+}
+
+.link:not(:hover){
+    transition: 1s;
+}
+
+.DropDownList:hover div{
+    display: flex;
+    align-items: baseline;
+    z-index: 1000;
+}
+
+.DropDownList div{
+    display: none;
+    opacity: 0.8;
+    position: absolute;
+    background-color: #3E94D1;
+    padding: 1vh 2vw;
+    margin: 2vh 0;
+}
+
+.DropDownList ul{
+    list-style: none;
+}
+
+.DropDownList li:hover{
+    background-color: #ff9540;
+}
