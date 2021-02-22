@@ -1,5 +1,6 @@
 import {IProduct} from "../../interfaces/catalog/IProducts.type";
 import {catalogAPI} from "../../api/api";
+import {Dispatch} from "redux";
 
 
 interface IProducts {
@@ -20,6 +21,11 @@ interface IState {
   readonly types: ITypes;
   products: IProducts;
 }
+
+export type ProductsActionsType = ReturnType<typeof setCarGoodsAC> |
+  ReturnType<typeof setMatsAC> |
+  ReturnType<typeof setDisksAC> |
+  ReturnType<typeof setTiresAC>;
 
 const SET_PRODUCTS_DISKS = "SET-PRODUCTS-DISKS";
 const SET_PRODUCTS_TIRES = "SET-PRODUCTS-TIRES";
@@ -47,7 +53,7 @@ const initialState: IState = {
 }
 
 
-const productsReducer = (state: IState = initialState, action) => {
+const productsReducer = (state: IState = initialState, action: ProductsActionsType) => {
   switch (action.type) {
     case SET_PRODUCTS_CARGOODS: {
       return {...state, products: {...state.products, carGoods: action.data} }
@@ -65,10 +71,10 @@ const productsReducer = (state: IState = initialState, action) => {
   }
 }
 
-export const setCarGoodsAC = (data) => ({type: SET_PRODUCTS_CARGOODS, data});
-export const setMatsAC = (data) => ({type: SET_PRODUCTS_MATS, data});
-export const setTiresAC = (data) => ({type: SET_PRODUCTS_TIRES, data});
-export const setDisksAC = (data) => ({type: SET_PRODUCTS_DISKS, data});
+export const setCarGoodsAC = (data) => ({type: SET_PRODUCTS_CARGOODS, data} as const);
+export const setMatsAC = (data) => ({type: SET_PRODUCTS_MATS, data} as const);
+export const setTiresAC = (data) => ({type: SET_PRODUCTS_TIRES, data} as const);
+export const setDisksAC = (data) => ({type: SET_PRODUCTS_DISKS, data} as const);
 
 
 export const getProducts = (type: string) => (dispatch) => {
@@ -98,7 +104,7 @@ export const getProducts = (type: string) => (dispatch) => {
   });
 }
 
-export const searchProductByName = (type: string, name: string) => (dispatch) => {
+export const searchProductByName = (type: string, name: string) => (dispatch: Dispatch<ProductsActionsType>) => {
   catalogAPI.getProductByName(type, name).then(response => {
     switch (type) {
       case disks: {

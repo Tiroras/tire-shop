@@ -1,0 +1,29 @@
+.layout{
+    display: flex;
+    width: 95%;
+    margin: 1vh auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 3vh;
+    background-color: white;
+}
+
+.layout img{
+    width: 150px;
+    height: 150px;
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 0;
+    padding-right: 2vh;
+    width: 90%;
+    margin-left: 4vw;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

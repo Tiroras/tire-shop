@@ -1,0 +1,13 @@
+@media screen and (max-width: 800px) {
+    .layout{
+        width: 100%;
+    }
+
+    .layout input{
+        padding: 2vh 3vw;
+    }
+
+    .layout textarea{
+        padding: 2vh 3vw;
+    }
+}

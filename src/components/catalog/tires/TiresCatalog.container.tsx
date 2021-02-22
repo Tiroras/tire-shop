@@ -1,9 +1,8 @@
 import React, {useEffect} from 'react';
 import TiresCatalog from "./TiresCatalog";
 import {connect} from "react-redux";
-import {getProducts, setTiresAC} from "../../../redux/products/products-reducer";
+import {getProducts} from "../../../redux/products/products-reducer";
 import {IProductData} from "../../../interfaces/catalog/ICatalog";
-import {catalogAPI} from "../../../api/api";
 
 
 interface IProps {

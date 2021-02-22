@@ -10,6 +10,7 @@ const News = (props) => {
       <div className={classes.posts}>
         {props.posts.map((post) => (
           <PostContainer
+            key={post.id}
             id={post.id}
             img={post.img}
             text={post.text}

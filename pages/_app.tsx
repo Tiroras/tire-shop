@@ -7,7 +7,7 @@ import NextNProgress from "nextjs-progressbar";
 import {makeServer} from "../src/api/api";
 
 
-makeServer();
+//makeServer();
 
 function App({ Component, pageProps }: AppProps) {
   return (

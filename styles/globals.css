@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
+@media screen and (max-width: 800px) {
+  input{
+    padding: 1vh 3vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  input{
+    padding: 0.5vw;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
 html,
 body {
   padding: 0;
@@ -23,7 +41,6 @@ a {
 
 input{
   margin: 1.5vh 0;
-  padding: 0.5vw;
   border-radius: 5px;
   border: 1px solid gray;
 }
@@ -35,8 +52,4 @@ label{
 .checkbox{
   display: flex;
   align-items: baseline;
-}
-
-* {
-  box-sizing: border-box;
 }

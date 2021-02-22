@@ -1,6 +1,7 @@
 import React from 'react';
 import CounterContainer from "../../general/counter/Counter.container";
 import styled from "styled-components";
+import classes from "./CartItem.module.css";
 
 
 interface IProps {
@@ -62,21 +63,21 @@ const ProductInfo = styled(Span)`
 
 const CartItem = (props: IProps) => {
   return(
-    <Layout>
+    <div className={classes.layout}>
       <span>
         <img src={props.img ? props.img : "images/wheelImg.png"} />
       </span>
-      <RightPart>
-        <ProductInfo>
+      <span className={classes.right}>
+        <span className={classes.info}>
           <div>
             {props.name}
           </div>
           <div>
             {props.price} руб./шт
           </div>
-        </ProductInfo>
-      </RightPart>
-    </Layout>
+        </span>
+      </span>
+    </div>
   )
 }
 

@@ -1,117 +1,11 @@
-import axios from "axios";
 import {createServer} from "miragejs";
-import MockAdapter from "axios-mock-adapter";
-
-
-const mock = new MockAdapter(axios)
-
-mock.onGet("/posts").reply(() => {
-  const posts = [
-    {
-      id: 1,
-      header: "Мы открылись",
-      text: "Спешим сообщить вам что наш автосалон наконец открыт для вас. Ждем посетителей.",
-      img: ""
-    },
-    {
-      id: 2,
-      header: "Сайт открыт",
-      text: "Спешим сообщить вам что наш автосалон наконец открыл для вас сайт.. Ждем посетителей.",
-      img: ""
-    }
-  ];
-  return posts;
-})
-
-
-
-const instance = axios.create({
-  baseURL: 'http://localhost:4200'
-});
-
-
-const URL = "http://someapi.api"
-
-// export const newsAPI = {
-//   getPosts(){
-//     return fetch(`${URL}/posts`).then(res => {
-//       return res.json();
-//     })
-//   },
-//
-//   getPost(id: number){
-//     return fetch(`${URL}/posts/${id}`).then(res => {
-//       return res.json();
-//     })
-//   }
-// }
-//
-// export const catalogAPI = {
-//   getProducts(type: string){
-//     return fetch(`${URL}/products?type=${type}`).then(res => {
-//       return res.json();
-//     })
-//   },
-//
-//   getProduct(id: number){
-//     return fetch(`${URL}/products?id=${id}`).then(res => {
-//       return res.json();
-//     })
-//   },
-//
-//   getProductByName(type: string, name: string){
-//     return fetch(`${URL}/products?type=${type}&name=${name}`).then((response => {
-//       return response.json();
-//     }));
-//   }
-// }
-
-export const newsAPI = {
-  getPosts(){
-    return instance.get("posts").then(response => {
-      return response.data;
-    });
-  },
-
-  getPost(id: number){
-    return instance.get(`posts/${id}`).then(response => {
-      return response.data;
-    })
-  }
-}
-
-export const catalogAPI = {
-  getProducts(type: string){
-    return instance.get(`products?type=${type}`).then(response => {
-      return response.data;
-    });
-  },
-
-  getProduct(id: number){
-    return instance.get(`products?id=${id}`).then(response => {
-      return response.data
-    });
-  },
-
-  getProductsByProperties(property: string, value: string){
-    return instance.get(`products/properties?${property}=${value}`).then(response => {
-      return response.data;
-    });
-  },
-
-  getProductByName(type: string, name: string){
-    return instance.get(`products?type=${type}&name=${name}`).then((response => {
-      return response.data;
-    }));
-  }
-}
 
 
 export function makeServer() {
   const server = createServer({
 
     routes() {
-      this.namespace = "http://localhost:4200"
+      this.namespace = "api";
 
       this.get("/posts", () => {
         const posts = [
@@ -124,6 +18,12 @@ export function makeServer() {
           {
             id: 2,
             header: "Сайт открыт",
+            text: "Спешим сообщить вам что наш автосалон наконец открыл для вас сайт.. Ждем посетителей.",
+            img: ""
+          },
+          {
+            id: 3,
+            header: "Сайт",
             text: "Спешим сообщить вам что наш автосалон наконец открыл для вас сайт.. Ждем посетителей.",
             img: ""
           }
@@ -217,3 +117,88 @@ export function makeServer() {
 
   return server
 }
+
+
+export const newsAPI = {
+  getPosts(){
+    return fetch(`http://localhost:4200/posts`).then((res: Response) => {
+      return res.json();
+    })
+  },
+
+  getPost(id: number){
+    return fetch(`http://localhost:4200/posts?id=${id}`).then((res: Response) => {
+      return res.json();
+    })
+  }
+}
+
+export const catalogAPI = {
+  getProducts(type: string){
+    return fetch(`http://localhost:4200/products?type=${type}`).then((res: Response) => {
+      return res.json();
+    })
+  },
+
+  getProduct(id: number){
+    return fetch(`http://localhost:4200/products?id=${id}`).then((res: Response) => {
+      return res.json();
+    })
+  },
+
+  getProductByName(type: string, name: string){
+    return fetch(`http://localhost:4200/products?type=${type}&name=${name}`).then((response: Response) => {
+      return response.json();
+    });
+  }
+}
+
+export const orderAPI = {
+  postOrder(order){
+    console.log(order)
+    // return fetch("http://localhost:4200/orders", {
+    //   method: "POST",
+    //   body: JSON.stringify(order)
+    // })
+  }
+}
+
+// export const newsAPI = {
+//   getPosts(){
+//     return instance.get("posts").then(response => {
+//       return response.data;
+//     });
+//   },
+//
+//   getPost(id: number){
+//     return instance.get(`posts/${id}`).then(response => {
+//       return response.data;
+//     })
+//   }
+// }
+//
+// export const catalogAPI = {
+//   getProducts(type: string){
+//     return instance.get(`products?type=${type}`).then(response => {
+//       return response.data;
+//     });
+//   },
+//
+//   getProduct(id: number){
+//     return instance.get(`products?id=${id}`).then(response => {
+//       return response.data
+//     });
+//   },
+//
+//   getProductsByProperties(property: string, value: string){
+//     return instance.get(`products/properties?${property}=${value}`).then(response => {
+//       return response.data;
+//     });
+//   },
+//
+//   getProductByName(type: string, name: string){
+//     return instance.get(`products?type=${type}&name=${name}`).then((response => {
+//       return response.data;
+//     }));
+//   }
+// }

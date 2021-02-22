@@ -1,0 +1,54 @@
+@media screen and (max-width: 800px) {
+    .layout span{
+        width: 100%;
+        margin-top: 5vh;
+    }
+
+    .layout a{
+        margin-top: 5vh;
+        width: 100%;
+    }
+
+    .link{
+        padding: 3vh 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .layout span{
+        width: 50%;
+    }
+
+    .link{
+        padding: 3vh 15vh;
+    }
+}
+
+
+.layout{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+
+.link{
+    background-color: #3e94d1;
+    color: white;
+    transition: 0.3s;
+    font-size: 3vh;
+}
+
+.link:hover{
+    background-color: #0a64a4;
+}
+
+.totalPrice{
+    background-color: #a9a9a9;
+    border: 3px solid #727272;
+    padding: 3vh 15vh 3vh 3vh;;
+    font-size: 3vh;
+}

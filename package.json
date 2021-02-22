@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "mock": "json-server -w db.json -p 4200",
-    "serve": "concurrently \"yarn start\" \"yarn mock\""
+    "serve": "concurrently \"yarn dev\" \"yarn mock\""
   },
   "dependencies": {
     "@types/axios": "^0.14.0",

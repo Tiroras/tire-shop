@@ -1,0 +1,60 @@
+@media screen and (max-width: 800px) {
+    .buy{
+        display: flex;
+    }
+
+    .buy button{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .buy{
+        display: none;
+    }
+}
+
+
+.layout{
+    border: 3px solid #a9a9a9;
+    border-radius: 15px;
+    padding: 0 2vw;
+    width: 300px;
+    margin: 2vh 1vw 0 1vw;
+    z-index: 10;
+    height: 380px;
+    transition: 0.3s;
+}
+
+.layout div{
+    margin: 2vh 0;
+}
+
+.img{
+    text-align: center;
+}
+
+.img img{
+    width: 200px;
+    height: 200px;
+}
+
+.layout:hover{
+    z-index: 1000;
+    position: relative;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.layout:hover .buy{
+    display: flex;
+}
+
+.layout button{
+    padding:1vh 2vh;
+}
+
+.information{
+    display: flex;
+    justify-content: space-between;
+}

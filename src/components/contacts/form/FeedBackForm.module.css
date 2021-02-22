@@ -1,3 +1,17 @@
+@media screen and (max-width: 800px) {
+    .block input{
+        width: 100%;
+    }
+
+    .block textarea{
+        width: 100%;
+    }
+
+    .button{
+        width: 100%;
+    }
+}
+
 .message{
     resize: none;
     height: 15vh;

@@ -20,7 +20,7 @@
     transition: 0.3s;
 }
 
-.tab :hover{
+.tab:hover{
     background-color: #0a64a4;
     transition: 0.3s;
     height: 30vh;

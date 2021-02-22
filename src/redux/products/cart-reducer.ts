@@ -3,8 +3,13 @@ import {catalogAPI} from "../../api/api";
 import {Dispatch} from "redux";
 
 
+export type CartActionsType = ReturnType<typeof setTotalPriceAC> |
+  ReturnType<typeof setNumbersAC> |
+  ReturnType<typeof setCartAC> |
+  ReturnType<typeof clearCartAC>
+
 interface ICart{
-  products: IProduct[] | IDisk[] | ITire[];
+  products: IProduct[];
   numbers: null | number;
   totalPrice: null | number;
 }
@@ -22,12 +27,12 @@ const initialState: IState = {
   cart: {
     products: [],
     numbers: null,
-    totalPrice: null
+    totalPrice: 0
   }
 
 }
 
-const cartReducer = (state: IState = initialState, action) => {
+const cartReducer = (state: IState = initialState, action: CartActionsType) => {
   switch (action.type) {
     case SET_CART: {
       return {...state,
@@ -40,13 +45,13 @@ const cartReducer = (state: IState = initialState, action) => {
       return {...state, cart: {...state.cart, numbers: state.cart.products.length}}
     }
     case SET_TOTAL_PRICE: {
-      let prices: Array<number> = [];
-      let array: IProduct[] | IDisk[] | ITire[] = state.cart.products;
-      array.forEach((item: IProduct | IDisk | ITire) => {
-        prices.push(item.price);
-      })
-      let totalPrice = prices.reduce(
-        (sum: number, current: number) => sum + current, 0)
+      if(state.cart.products.length === 0){
+        return {...state, cart: {...state.cart, totalPrice: 0}}
+      }
+      const products: IProduct[] = state.cart.products;
+      const totalPrice = products.reduce((prev: number, curr: IProduct) => {
+        return prev + curr.price
+      }, 0)
       return {...state, cart: {...state.cart, totalPrice}}
     }
     case CLEAR_CART: {
@@ -58,13 +63,13 @@ const cartReducer = (state: IState = initialState, action) => {
 
 export default cartReducer;
 
-export const setCartAC = (data) => ({type: SET_CART, data});
-export const setNumbersAC = () => ({type: SET_NUMBERS});
-export const clearCartAC = () => ({type: CLEAR_CART});
-export const setTotalPriceAC = () => ({type: SET_TOTAL_PRICE})
+export const setCartAC = (data: IProduct) => ({type: SET_CART, data} as const);
+export const setNumbersAC = () => ({type: SET_NUMBERS} as const);
+export const clearCartAC = () => ({type: CLEAR_CART} as const);
+export const setTotalPriceAC = () => ({type: SET_TOTAL_PRICE} as const);
 
 
-export const addToCart = (id: number) => (dispatch: Dispatch) => {
+export const addToCart = (id: number) => (dispatch: Dispatch<CartActionsType>) => {
   catalogAPI.getProduct(id).then(response => {
     dispatch(setCartAC(response));
     dispatch(setNumbersAC());
@@ -72,7 +77,8 @@ export const addToCart = (id: number) => (dispatch: Dispatch) => {
   })
 }
 
-export const clearCart = () => (dispatch: Dispatch) => {
+export const clearCart = () => (dispatch: Dispatch<CartActionsType>) => {
   dispatch(clearCartAC());
   dispatch(setNumbersAC());
+  dispatch(setTotalPriceAC());
 }

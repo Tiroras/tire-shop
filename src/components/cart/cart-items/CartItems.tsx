@@ -1,6 +1,6 @@
 import React from 'react';
 import CartItem from "./CartItem";
-import styled from "styled-components";
+import classes from "./CartItems.module.css";
 
 
 interface IData{
@@ -17,45 +17,9 @@ interface IProps {
   className?: string;
 }
 
-const Div = (props) => {
-  return(
-    <div className={props.className}>
-      {props.children}
-    </div>
-  )
-}
-
-const Button = (props) => {
-  return (
-    <button className={props.className}>
-      {props.children}
-    </button>
-  )
-}
-
-const Layout = styled(Div)`
-  height: 800px;
-  border: 2px solid #a9a9a9;
-  transition: 0.3s;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  background-color: #a9a9a9;
-`;
-
-const StyledButton = styled(Button)`
-  width: 100%;
-  border: 0;
-  border-radius: 0;
-  padding: 3vh 0;
-  color: white;
-  font-size: 4vh;
-  background-color: #0a64a4;
-`;
-
 const CartItems = (props: IProps) => {
   return(
-    <Layout>
+    <div className={classes.layout}>
       <div>
         {props.data.map((prop: IData) => (
           <CartItem
@@ -68,12 +32,11 @@ const CartItems = (props: IProps) => {
         ))}
       </div>
       <div>
-        <StyledButton
-          onClick={props.clearCart}>
+        <button className={classes.button} onClick={props.clearCart}>
           Очистить корзину
-        </StyledButton>
+        </button>
       </div>
-    </Layout>
+    </div>
   )
 }
 

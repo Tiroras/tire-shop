@@ -11,7 +11,7 @@ import classes from "./MainPage.module.css";
 const MainPage = (props) => {
   return(
     <div className={classes.layout}>
-      <div>
+      <div className={classes.block}>
         <div>
           <h1>Подберите для себя шины и диски</h1>
         </div>
@@ -26,14 +26,16 @@ const MainPage = (props) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={classes.block}>
         <SearchFeedBack />
       </div>
-      <PopularTires />
-      <div>
+      <div className={classes.block}>
+        <PopularTires />
+      </div>
+      <div className={classes.block}>
         <PopularDisks />
       </div>
-      <div className={classes.more}>
+      <div className={`${classes.more} ${classes.block}`}>
         <h3>
           Адреса наших магазинов
         </h3>

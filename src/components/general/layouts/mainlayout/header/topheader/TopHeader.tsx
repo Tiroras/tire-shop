@@ -11,7 +11,7 @@ const TopHeader = () => {
         <Link href={'/'}>
           <a><h1>Салон Шива</h1></a>
         </Link>
-        <span>
+        <span className={classes.number}>
           Номер телефона
         </span>
       </span>

@@ -23,6 +23,7 @@ let reducer = combineReducers({
   form: formReducer,
 });
 
+export type ReducerType = ReturnType<typeof reducer>
 
 const initStore = () => {
   return createStore(reducer, applyMiddleware(thunkMiddleware))

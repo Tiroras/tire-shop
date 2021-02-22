@@ -1,0 +1,19 @@
+.layout{
+    height: 800px;
+    border: 2px solid #a9a9a9;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #a9a9a9;
+}
+
+.button{
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    padding: 3vh 0;
+    color: white;
+    font-size: 4vh;
+    background-color: #0a64a4;
+}

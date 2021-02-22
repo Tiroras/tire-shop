@@ -1,17 +1,22 @@
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .links{
         display: none;
     }
 }
 
+@media screen and (min-width: 800px) {
+    .links{
+        display: block;
+    }
+}
+
 .nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
     flex-wrap: wrap;
     position: sticky;
 
-    padding: 0vh 4vw;
 
     font-size: 2.5vh;
 
@@ -22,7 +27,7 @@
 }
 
 .link{
-    padding: 2vh 5vw;
+    padding: 2vh 4vw;
 }
 
 .link:hover{

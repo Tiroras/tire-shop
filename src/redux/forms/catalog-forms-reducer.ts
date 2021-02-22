@@ -17,7 +17,8 @@ const initialState: IState = {
   disksName: null,
   tiresName: null,
   matsName: null,
-  carGoodsName: null
+  carGoodsName: null,
+
 }
 
 const catalogFormsReducer = (state: IState = initialState, action) => {
