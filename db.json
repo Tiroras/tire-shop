@@ -17,75 +17,163 @@
   "products": [
     {
       "id": 1,
-      "name": "disk 1",
-      "price": 4523,
+      "name": "MICHELIN X-Ice Snow",
+      "price": 4360,
       "type": "disks",
       "inStock": false,
       "attributesID": 1
     },
     {
       "id": 2,
-      "name": "disk 2",
-      "price": 4523,
+      "name": "5,5х14 4х98 Y279 Et35 58,6 S N2O Nitro",
+      "price": 2950,
       "type": "disks",
       "inStock": true,
       "attributesID": 3
     },
     {
       "id": 3,
-      "name": "tire 1",
-      "price": 4523,
+      "name": "175/65 R14 Tunga Zodiak2 86Т",
+      "price": 1805,
       "type": "tires",
       "inStock": true,
       "attributesID": 2
     },
     {
       "id": 4,
-      "name": "tire 2",
-      "price": 4523,
+      "name": "175/70 R13 Cordiant Road Runner 82H",
+      "price": 2080,
       "type": "tires",
       "inStock": false,
       "attributesID": 4
     },
     {
       "id": 5,
-      "name": "mats 1",
-      "price": 4523,
+      "name": "Chery Tiggo (2007) (Vortex Tingo)",
+      "price": 1250,
       "type": "mats",
       "inStock": false,
       "attributesID": null
     },
     {
       "id": 6,
-      "name": "mats 2",
-      "price": 4523,
+      "name": "Ford Focus III",
+      "price": 1180,
       "type": "mats",
       "inStock": true,
       "attributesID": null
     },
     {
       "id": 7,
-      "name": "carGood 1",
-      "price": 1245,
+      "name": "Головка ударная для л/дисков 1/2 6гр. 17х85мм. Force 4458517TH-F",
+      "price": 320,
       "type": "carGoods",
       "inStock": true,
       "attributesID": null
     },
     {
       "id": 8,
-      "name": "carGood 2",
-      "price": 1245,
+      "name": "Масло Castrol Magnatec 5W40 CN/CF A3/B4 разливное синт. 1л",
+      "price": 450,
       "type": "carGoods",
       "inStock": false,
       "attributesID": null
     },
     {
       "id": 9,
-      "name": "fafnir",
-      "price": 4523,
+      "name": "5,5х14 4х98 Ягуар Et38 58.6 алмаз СКАД",
+      "price": 3250,
       "type": "disks",
-      "inStock": false,
+      "inStock": true,
       "attributesID": 1
+    },
+    {
+      "id": 10,
+      "name": "6,5х16 5х108 FD45 Ет50 63,3 Sil LegeArtis автодиск",
+      "price": 4370,
+      "type": "disks",
+      "inStock": true,
+      "attributesID": 1
+    },
+    {
+      "id": 11,
+      "name": "6,5х15 5х105 Омаха Et35 56,6 КС637-02 алмаз черный КиК автодиск",
+      "price": 3100,
+      "type": "disks",
+      "inStock": true,
+      "attributesID": 1
+    },
+    {
+      "id": 12,
+      "name": "175/70 R14 Continental Conti EcoContact 5 84Т",
+      "price": 3900,
+      "type": "tires",
+      "inStock": true,
+      "attributesID": 2
+    },
+    {
+      "id": 13,
+      "name": "185/55 R15 Pirelli P1 cint Verde 82H",
+      "price": 4250,
+      "type": "tires",
+      "inStock": true,
+      "attributesID": 2
+    },
+    {
+      "id": 14,
+      "name": "175/70 R14 Viatti Strada Assimetrico V-130 84Н",
+      "price": 2190,
+      "type": "tires",
+      "inStock": true,
+      "attributesID": 2
+    },
+    {
+      "id": 15,
+      "name": "Hyundai ix35 (2010) ( с подпятником)",
+      "price": 1285,
+      "type": "mats",
+      "inStock": true,
+      "attributesID": null
+    },
+    {
+      "id": 16,
+      "name": "Kia Rio III (2011-2014 ) (3D с подпятником)",
+      "price": 1250,
+      "type": "mats",
+      "inStock": true,
+      "attributesID": null
+    },
+    {
+      "id": 17,
+      "name": "Opel Astra J (2010)",
+      "price": 1200,
+      "type": "mats",
+      "inStock": true,
+      "attributesID": null
+    },
+    {
+      "id": 18,
+      "name": "Масло Shell Helix ULTRA 5W40 A3/B4 SN/CF синт. 4л.",
+      "price": 2500,
+      "type": "carGoods",
+      "inStock": true,
+      "attributesID": null
+    },
+    {
+      "id": 19,
+      "name": "Масло Mannol Compressor ISO 1л.",
+      "price": 250,
+      "type": "carGoods",
+      "inStock": true,
+      "attributesID": null
+    },
+    {
+      "id": 20,
+      "name": "Жидкий ключ LAVR 400мл. L1491",
+      "price": 150,
+      "type": "carGoods",
+      "inStock": true,
+      "attributesID": null
     }
   ],
 

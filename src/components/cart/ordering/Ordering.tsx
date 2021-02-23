@@ -1,6 +1,5 @@
 import React from 'react';
 import {Field, reduxForm} from "redux-form";
-import Link from "next/link";
 import classes from "./Ordering.module.css"
 
 

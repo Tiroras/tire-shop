@@ -1,133 +1,17 @@
-import {createServer} from "miragejs";
 
 
-export function makeServer() {
-  const server = createServer({
-
-    routes() {
-      this.namespace = "api";
-
-      this.get("/posts", () => {
-        const posts = [
-          {
-            id: 1,
-            header: "Мы открылись",
-            text: "Спешим сообщить вам что наш автосалон наконец открыт для вас. Ждем посетителей.",
-            img: ""
-          },
-          {
-            id: 2,
-            header: "Сайт открыт",
-            text: "Спешим сообщить вам что наш автосалон наконец открыл для вас сайт.. Ждем посетителей.",
-            img: ""
-          },
-          {
-            id: 3,
-            header: "Сайт",
-            text: "Спешим сообщить вам что наш автосалон наконец открыл для вас сайт.. Ждем посетителей.",
-            img: ""
-          }
-        ];
-        return posts;
-      });
-
-      this.get(`/products?type:type`, (type) => {
-        const products = [
-          {
-            id: 1,
-            name: "disk 1",
-            price: 4523,
-            type: "disks",
-            inStock: false,
-            attributesID: 1
-          },
-          {
-            id: 2,
-            name: "disk 2",
-            price: 4523,
-            type: "disks",
-            inStock: true,
-            attributesID: 3
-          },
-          {
-            id: 3,
-            name: "tire 1",
-            price: 4523,
-            type: "tires",
-            inStock: true,
-            attributesID: 2
-          },
-          {
-            id: 4,
-            name: "tire 2",
-            price: 4523,
-            type: "tires",
-            inStock: false,
-            attributesID: 4
-          },
-          {
-            id: 5,
-            name: "mats 1",
-            price: 4523,
-            type: "mats",
-            inStock: false,
-            attributesID: null
-          },
-          {
-            id: 6,
-            name: "mats 2",
-            price: 4523,
-            type: "mats",
-            inStock: true,
-            attributesID: null
-          },
-          {
-            id: 7,
-            name: "carGood 1",
-            price: 1245,
-            type: "carGoods",
-            inStock: true,
-            attributesID: null
-          },
-          {
-            id: 8,
-            name: "carGood 2",
-            price: 1245,
-            type: "carGoods",
-            inStock: false,
-            attributesID: null
-          },
-          {
-            id: 9,
-            name: "fafnir",
-            price: 4523,
-            type: "disks",
-            inStock: false,
-            attributesID: 1
-          }
-        ];
-        return products;
-      })
-
-      this.post("/orders", (schema, request) => {
-        return {order: request.requestBody}
-      })
-    },
-  })
-
-  return server
-}
-
+const URL = "https://my-json-server.typicode.com/Tiroras/mockjson"
 
 export const newsAPI = {
   getPosts(){
-    return fetch(`http://localhost:4200/posts`).then((res: Response) => {
+    return fetch(`${URL}/posts`).then((res: Response) => {
+      console.log(res)
       return res.json();
     })
   },
 
   getPost(id: number){
-    return fetch(`http://localhost:4200/posts?id=${id}`).then((res: Response) => {
+    return fetch(`${URL}/posts?id=${id}`).then((res: Response) => {
       return res.json();
     })
   }
@@ -135,19 +19,19 @@ export const newsAPI = {
 
 export const catalogAPI = {
   getProducts(type: string){
-    return fetch(`http://localhost:4200/products?type=${type}`).then((res: Response) => {
+    return fetch(`${URL}/products?type=${type}`).then((res: Response) => {
       return res.json();
     })
   },
 
   getProduct(id: number){
-    return fetch(`http://localhost:4200/products?id=${id}`).then((res: Response) => {
+    return fetch(`${URL}/products?id=${id}`).then((res: Response) => {
       return res.json();
     })
   },
 
   getProductByName(type: string, name: string){
-    return fetch(`http://localhost:4200/products?type=${type}&name=${name}`).then((response: Response) => {
+    return fetch(`${URL}/products?type=${type}&name=${name}`).then((response: Response) => {
       return response.json();
     });
   }
@@ -156,10 +40,10 @@ export const catalogAPI = {
 export const orderAPI = {
   postOrder(order){
     console.log(order)
-    // return fetch("http://localhost:4200/orders", {
-    //   method: "POST",
-    //   body: JSON.stringify(order)
-    // })
+    return fetch("http://localhost:4200/orders", {
+      method: "POST",
+      body: JSON.stringify(order)
+    })
   }
 }
 
