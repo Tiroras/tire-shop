@@ -1,4 +1,3 @@
-import {array} from "prop-types";
 
 
 const URL = "https://my-json-server.typicode.com/Tiroras/mockjson"
