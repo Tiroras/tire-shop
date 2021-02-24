@@ -3,6 +3,7 @@ import TiresCatalog from "./TiresCatalog";
 import {connect} from "react-redux";
 import {getProducts} from "../../../redux/products/products-reducer";
 import {IProductData} from "../../../interfaces/catalog/ICatalog";
+import {ReducerType} from "../../../redux/reducer";
 
 
 interface IProps {
@@ -13,8 +14,11 @@ interface IProps {
 
 const TiresCatalogContainer = (props: IProps) => {
   useEffect(() => {
-    props.getProducts(props.type)
-  }, [])
+    if(props.data.length === 0){
+      props.getProducts(props.type)
+    }
+  }, []);
+
   return(
     <TiresCatalog
       data={props.data}
@@ -22,7 +26,7 @@ const TiresCatalogContainer = (props: IProps) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReducerType) => ({
   type: state.productsData.types.tires,
   data: state.productsData.products.tires
 })

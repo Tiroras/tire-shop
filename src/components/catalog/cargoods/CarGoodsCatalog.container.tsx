@@ -4,6 +4,7 @@ import {catalogAPI} from "../../../api/api";
 import {connect} from "react-redux";
 import {getProducts} from "../../../redux/products/products-reducer";
 import CarGoodsCatalog from "./CatGoodsCatalog";
+import {ReducerType} from "../../../redux/reducer";
 
 interface IProps {
   data: IProductData[];
@@ -22,7 +23,7 @@ const CarGoodsCatalogContainer = (props: IProps) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReducerType) => ({
   type: state.productsData.types.carGoods,
   data: state.productsData.products.carGoods
 })

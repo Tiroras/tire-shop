@@ -1,3 +1,4 @@
+import {array} from "prop-types";
 
 
 const URL = "https://my-json-server.typicode.com/Tiroras/mockjson"
@@ -31,8 +32,18 @@ export const catalogAPI = {
   },
 
   getProductByName(type: string, name: string){
-    return fetch(`${URL}/products?type=${type}&name=${name}`).then((response: Response) => {
+    return fetch(`${URL}/products?type=${type}`).then((response: Response) => {
       return response.json();
+    }).then(data => {
+      console.log(data)
+      const answer = data.reduce((array, product) => {
+        if(product.name.includes(name)){
+          array.push(product);
+        }
+        return array;
+      }, [])
+      console.log(answer)
+      return answer;
     });
   }
 }
@@ -40,9 +51,19 @@ export const catalogAPI = {
 export const orderAPI = {
   postOrder(order){
     console.log(order)
-    return fetch("http://localhost:4200/orders", {
+    return fetch(`${URL}/orders`, {
       method: "POST",
       body: JSON.stringify(order)
+    })
+  }
+}
+
+export const feedbackAPI = {
+  postFeedback(feedback){
+    console.log(feedback)
+    return fetch(`${URL}/feedbacks`, {
+      method: "POST",
+      body: JSON.stringify(feedback)
     })
   }
 }

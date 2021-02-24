@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {setNewsPostsAC} from "../../redux/news-reducer";
 import {newsAPI} from "../../api/api";
 import ThereNothing from "../general/ThereNothing";
+import {ReducerType} from "../../redux/reducer";
 
 
 const NewsContainer = (props) => {
@@ -26,7 +27,7 @@ const NewsContainer = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReducerType) => ({
   posts: state.newsData.posts
 })
 

@@ -3,6 +3,7 @@ import {IProductData} from "../../../interfaces/catalog/ICatalog";
 import {connect} from "react-redux";
 import {getProducts} from "../../../redux/products/products-reducer";
 import MatsCatalog from "./MatsCatalog";
+import {ReducerType} from "../../../redux/reducer";
 
 
 interface IProps {
@@ -22,7 +23,7 @@ const MatsCatalogContainer = (props: IProps) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReducerType) => ({
   type: state.productsData.types.mats,
   data: state.productsData.products.mats
 })

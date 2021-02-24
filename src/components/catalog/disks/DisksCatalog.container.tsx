@@ -3,6 +3,7 @@ import React, {useEffect} from "react";
 import Disks from "./DisksCatalog";
 import {IProductData} from "../../../interfaces/catalog/ICatalog";
 import {getProducts} from "../../../redux/products/products-reducer";
+import {ReducerType} from "../../../redux/reducer";
 
 
 interface IProps {
@@ -13,7 +14,9 @@ interface IProps {
 
 const DisksContainer = (props: IProps) => {
   useEffect(() => {
-    props.getProducts(props.type)
+    if(props.data.length === 0){
+      props.getProducts(props.type)
+    }
   }, [])
   return(
     <Disks
@@ -22,7 +25,7 @@ const DisksContainer = (props: IProps) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReducerType) => ({
     type: state.productsData.types.disks,
     data: state.productsData.products.disks
 })

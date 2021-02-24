@@ -2,6 +2,7 @@ import React from 'react';
 import Catalog from "./Catalog";
 import {connect} from "react-redux";
 import {ICatalog} from "../../interfaces/reducers/INav";
+import {ReducerType} from "../../redux/reducer";
 
 
 interface IState {
@@ -16,7 +17,7 @@ const CatalogContainer = (state: IState) => {
   )
 }
 
-let mapStateToProps = (state) => ({
+let mapStateToProps = (state: ReducerType) => ({
   data: state.navData.catalog
 });
 
