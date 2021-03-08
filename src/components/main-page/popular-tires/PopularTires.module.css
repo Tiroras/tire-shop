@@ -34,10 +34,13 @@
     padding: 2vh;
     height: 400px;
     width: 270px;
+}
+
+.block{
     transition: 0.3s;
 }
 
-.type :hover{
+.block :hover{
     transition: 0.3s;
     transform: scale(1.1);
 }

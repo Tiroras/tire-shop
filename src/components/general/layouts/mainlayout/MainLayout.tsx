@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from "./header/Header";
 import classes from "./MainLayout.module.css"
-
+import CartButtonContainer from "./cart-button/CartButton.container";
 
 
 const MainLayout = (props) => {
@@ -11,6 +11,7 @@ const MainLayout = (props) => {
       <main className={classes.layout}>
         {props.children}
       </main>
+      <CartButtonContainer />
     </>
   )
 }

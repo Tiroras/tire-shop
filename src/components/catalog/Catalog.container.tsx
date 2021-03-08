@@ -17,7 +17,7 @@ const CatalogContainer = (state: IState) => {
   )
 }
 
-let mapStateToProps = (state: ReducerType) => ({
+const mapStateToProps = (state: ReducerType) => ({
   data: state.navData.catalog
 });
 
