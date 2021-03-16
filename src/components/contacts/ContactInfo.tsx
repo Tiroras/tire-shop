@@ -1,4 +1,6 @@
 import React from 'react'
+import NumbersContainer from "./numbers/Numbers.container";
+import EmailsContainer from "./emails/Emails.container";
 
 
 const ContactInfo = () => {
@@ -16,23 +18,13 @@ const ContactInfo = () => {
         <div>
           <h3>Наши телефоны</h3>
         </div>
-        <div>
-          Номер телефона
-          Номер телефона
-          Номер телефона
-        </div>
+        <NumbersContainer />
       </div>
       <div>
         <div>
           <h3>E-mail</h3>
         </div>
-        <div>
-          Номер телефона
-          <br />
-          Номер телефона
-          <br />
-          Номер телефона
-        </div>
+        <EmailsContainer />
       </div>
       <div>
         <div>

@@ -29,7 +29,6 @@ const initialState: IState = {
     numbers: null,
     totalPrice: 0
   }
-
 }
 
 const cartReducer = (state: IState = initialState, action: CartActionsType) => {

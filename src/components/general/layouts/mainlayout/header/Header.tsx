@@ -1,14 +1,14 @@
 import React from "react";
 import Nav from "./nav/Nav";
-import TopHeader from "./topheader/TopHeader";
 import classes from "./Header.module.css";
+import TopHeaderContainer from "./topheader/header-cart/TopHeader.container";
 
 
 
 const Header = () => {
   return(
     <header className={classes.header}>
-      <TopHeader />
+      <TopHeaderContainer />
       <Nav />
     </header>
   )

@@ -10,6 +10,7 @@ import productsReducer from "./products/products-reducer";
 import cartReducer from "./products/cart-reducer";
 import thunkMiddleware from "redux-thunk"
 import catalogFormsReducer from "./forms/catalog-forms-reducer";
+import CompanyInfoReducer from "./numbers-reducer";
 
 let reducer = combineReducers({
   navData: NavReducer,
@@ -20,6 +21,7 @@ let reducer = combineReducers({
   newsData: NewsReducer,
   productsData: productsReducer,
   cartData: cartReducer,
+  CompanyInfoData: CompanyInfoReducer,
   form: formReducer,
 });
 
