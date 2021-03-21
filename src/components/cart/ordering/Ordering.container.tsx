@@ -8,12 +8,23 @@ import {useRouter} from "next/router";
 
 
 const OrderingContainer = () => {
-  const order = useSelector((state: ReducerType) => state.cartData.cart);
+  const productsID: Array<number> = useSelector((state: ReducerType) => state.cartData.cart.productsID);
+  const quantity: number = useSelector((state: ReducerType) => state.cartData.cart.numbers);
+  const totalPrice: number = useSelector((state: ReducerType) => state.cartData.cart.totalPrice);
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const handleSubmit = () => {
-    orderAPI.postOrder(order);
+  const products = productsID.toString();
+
+  const handleSubmit = (values) => {
+    orderAPI.postOrder({
+      name: values.name,
+      number: values.number,
+      email: values.email,
+      products,
+      quantity,
+      totalPrice
+    });
     dispatch(clearCart());
     router.push("/");
   }

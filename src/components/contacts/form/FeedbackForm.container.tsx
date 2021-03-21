@@ -3,6 +3,7 @@ import FeedbackReduxForm from "./FeedbackForm";
 import {connect} from "react-redux";
 import {IContacts} from "../../../interfaces/reducers/IContacts";
 import {ReducerType} from "../../../redux/reducer";
+import {feedbackAPI} from "../../../api/api";
 
 
 interface IProps {
@@ -10,8 +11,18 @@ interface IProps {
 }
 
 const FeedbackFormContainer = (props) => {
+  const handleSubmit = (values) => {
+    feedbackAPI.postFeedback({
+      email: values.email,
+      userName: values.userName,
+      number: values.number,
+      message: values.message
+    })
+  }
+
   return(
     <FeedbackReduxForm
+      onSubmit={handleSubmit}
     />
   )
 }

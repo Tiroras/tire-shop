@@ -9,9 +9,9 @@ interface IProps {
   data: IContacts
 }
 
-const FeedbackForm = () => {
+const FeedbackForm = (props) => {
   return(
-    <form>
+    <form onSubmit={props.handleSubmit}>
       <div className={classes.block}>
         <Field
           name={"email"}
